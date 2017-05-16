@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block title %}{{ config.title }} - {{ page.title }}{% endblock title %}
+
+{% block content %}
+<div id="contentgrid" class="ui grid">
+  <div class="three wide large screen only teal inverted column">
+      {% set toc = get_page(path="/toc.md") %}
+      {{ toc.content | safe }}
+  </div>
+  <div class="thirteen wide olive inverted column">
+    {{ page.content | safe }}
+    {% if page.previous %}<a href="{{page.previous.path}}">&lt;&lt; {{page.previous.title}}</a>&nbsp;&nbsp;{% endif %}
+    {% if page.next %}&nbsp;&nbsp;<a href="{{page.next.path}}">{{page.next.title}} &gt;&gt;</a>{% endif %}
+  </div>
+</div>
+{% endblock content %}

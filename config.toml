@@ -1,0 +1,5 @@
+title = "t-rex"
+base_url = "https://pka.github.io/t-rex/"
+generate_tags_pages = false
+highlight_code = true
+insert_anchor_links = true

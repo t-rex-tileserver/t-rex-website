@@ -1,3 +1,7 @@
 node_modules
 semantic/dist
 semantic/site
+public/*
+static/themes
+static/components
+static/semantic*

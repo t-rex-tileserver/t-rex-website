@@ -1,0 +1,64 @@
+{% extends "index.html" %}
+
+{% block setmenu %}{% set curmenu = "home" %}{% endblock setmenu %}
+
+{% block title %}{{ config.title }} - {{ section.title }}{% endblock title %}
+
+{% block content %}
+  <div class="ui vertical stripe teal inverted segment">
+    <div class="ui equal width stackable grid container">
+      <div class="row">
+        <div class="column">
+          <h3 class="ui header">Serve vector tiles</h3>
+          <div class="ui list">
+            <p class="item"><i class="star icon"></i>Live tiles from PostGIS geodata</p>            
+            <p class="item"><i class="star icon"></i>Embedded webserver</p>
+            <p class="item"><i class="star icon"></i>Visual styling with Maputnik</p>
+          </div>
+        </div>
+        <div class="column">
+          <img src="https://camo.githubusercontent.com/7f498ecfa17e37c80bff4b1cf690365e1352a295/68747470733a2f2f6a2e676966732e636f6d2f6735584d676c2e676966" class="ui large bordered rounded image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui vertical stripe olive inverted segment">
+    <div class="ui equal width stackable grid container">
+      <div class="row">
+        <div class="column">
+          <img src="https://github.com/pka/t-rex/raw/master/doc/t_rex_generate.gif" class="ui large bordered rounded image">
+        </div>
+        <div class="column">
+          <h3 class="ui header">Generate vector tiles</h3>
+          <div class="ui list">
+            <p class="item"><i class="star icon"></i>Tile generation command with simple parallelization</p>
+            <p class="item"><i class="star icon"></i>Generate configuration template</p>
+            <p class="item"><i class="star icon"></i>Support for custom tile grids</p>
+          </div>
+          <div class="ui huge primary button">Documentation <i class="right arrow icon"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui vertical stripe teal inverted segment">
+    <div class="ui equal width stackable grid container">
+      <div class="row">
+        <div class="column">
+          <h3 class="ui header">Easy to Use</h3>
+          <div class="ui list">
+            <p class="item"><i class="star icon"></i>Single executable - unzip and run</p>
+            <p class="item"><i class="star icon"></i>Auto-detection of layers in database</p>
+            <p class="item"><i class="star icon"></i>Single human readeable configuration file</p>
+            <p class="item"><i class="star icon"></i>Automatic reprojection to grid CRS</p>
+          </div>
+          <div class="ui huge secondary button">Try it <i class="right arrow icon"></i></div>
+        </div>
+        <div class="column">
+          <img src="https://github.com/pka/t-rex/raw/master/doc/t_rex_generate.gif" class="ui large bordered rounded image">
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

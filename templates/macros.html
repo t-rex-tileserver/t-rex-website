@@ -1,0 +1,4 @@
+{% macro menu_entries(selected) %}
+  <a class="{%if selected == "home"%}active{%endif%} item" href="/">Home</a>
+  <a class="{%if selected == "doc"%}active{%endif%} item" href="/doc">Documentation</a>
+{% endmacro menu_entries %}
