@@ -1,3 +1,19 @@
 /*******************************
         Global Overrides
 *******************************/
+
+.inverted.teal {
+  color: @black !important;
+}
+
+.ui.inverted.teal.stripe.segment {
+  color: @black !important;
+}
+
+.inverted.olive {
+  color: @black !important;
+}
+
+.ui.inverted.olive.stripe.segment {
+  color: @black !important;
+}

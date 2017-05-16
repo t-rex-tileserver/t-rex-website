@@ -6,14 +6,14 @@
        Fonts
 --------------------*/
 
-@fontName          : 'Lato';
+@fontName          : 'Roboto';
 @fontSmoothing     : antialiased;
 
 @headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 @pageFont          : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
 @googleFontName    : @fontName;
-@importGoogleFonts : true;
+@importGoogleFonts : false;
 @googleFontSizes   : '400,700,400italic,700italic';
 @googleSubset      : 'latin';
 
@@ -47,10 +47,10 @@
     Brand Colors
 --------------------*/
 
-@primaryColor        : @blue;
+@primaryColor        : @grey;
 @secondaryColor      : @black;
 
-@lightPrimaryColor   : @lightBlue;
+@lightPrimaryColor   : @lightGrey;
 @lightSecondaryColor : @lightBlack;
 
 /*--------------
@@ -121,7 +121,7 @@
 @pageOverflowX       : hidden;
 
 @lineHeight          : 1.4285em;
-@textColor           : rgba(0, 0, 0, 0.87);
+@textColor           : fadein(@black, 13%); //? rgba(0, 0, 0, 0.87);
 
 /*-------------------
       Paragraph
@@ -191,19 +191,19 @@
 --------------------*/
 
 /*---  Colors  ---*/
-@red              : #DB2828;
-@orange           : #F2711C;
+@red              : #cc0000; // geopole red
+@orange           : #ffbf00; // geopole orange
 @yellow           : #FBBD08;
-@olive            : #B5CC18;
-@green            : #21BA45;
-@teal             : #00B5AD;
-@blue             : #2185D0;
+@olive            : #e4e7d7; // geopole light olive
+@green            : #43bc06; // geopole green
+@teal             : #babfa7; // geopole olive
+@blue             : #0e5174; // geopole blue
 @violet           : #6435C9;
 @purple           : #A333C8;
 @pink             : #E03997;
-@brown            : #A5673F;
-@grey             : #767676;
-@black            : #1B1C1D;
+@brown            : #707463; // geopole list divider
+@grey             : #cccccc; // geopole grey
+@black            : #424535; // geopole black
 
 /*---  Light Colors  ---*/
 @lightRed         : #FF695E;
@@ -439,12 +439,12 @@
 
 @circularRadius                : 500rem;
 
-@borderColor               : rgba(34, 36, 38, 0.15);
-@strongBorderColor         : rgba(34, 36, 38, 0.22);
-@internalBorderColor       : rgba(34, 36, 38, 0.1);
-@selectedBorderColor       : rgba(34, 36, 38, 0.35);
-@strongSelectedBorderColor : rgba(34, 36, 38, 0.5);
-@disabledBorderColor       : rgba(34, 36, 38, 0.5);
+@borderColor               : rgba(204, 0, 0, 0.15);  // geopole red
+@strongBorderColor         : rgba(204, 0, 0, 0.22);
+@internalBorderColor       : rgba(204, 0, 0, 0.1);
+@selectedBorderColor       : rgba(204, 0, 0, 0.35);
+@strongSelectedBorderColor : rgba(204, 0, 0, 0.5);
+@disabledBorderColor       : rgba(204, 0, 0, 0.5);
 
 @solidInternalBorderColor  : #FAFAFA;
 @solidBorderColor          : #D4D4D5;
