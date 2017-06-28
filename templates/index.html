@@ -100,8 +100,32 @@
       margin-right: 1em;
     }
 
-    #toc {
-      font-size: 1.2em;
+    #toc ul {
+      list-style: none;
+    }
+
+    #toc > ul {
+      padding-left: 1em;
+    }
+
+    #toc > ul ul {
+      padding-left: 0;
+    }
+
+    #toc .active {
+      font-weight: bold;
+    }
+
+    #toc > ul > li {
+      font-size: 1.3em;
+      line-height: 2em;
+    }
+
+    #toc > ul > li ul li {
+      font-size: 0.9em;
+      border-left: 1px solid #424242;
+      padding: 0.4em 0 0.4em 1em;
+      line-height: 0.9em;
     }
 
     @media only screen and (max-width: 700px) {
