@@ -1,12 +1,8 @@
 +++
 title = "Documentation"
+sort_by = "order"
+template = "doc.html"
 +++
 
 t-rex Introduction
 ==================
-
-Topics:
-* Setup
-* Serving vector tiles
-* Generating vector tiles
-* Configuration

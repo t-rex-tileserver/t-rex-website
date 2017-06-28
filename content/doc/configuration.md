@@ -1,5 +1,6 @@
 +++
 title = "Configuration"
+order = 4
 +++
 
 Configuration
@@ -10,7 +11,6 @@ Services can be configured in a text file with [TOML](https://github.com/toml-la
 A good starting point is the template generated with the `genconfig` command:
 
     t_rex genconfig --dbconn postgresql://user:pass@localhost/osm2vectortiles
-
 
 Configuration file example:
 

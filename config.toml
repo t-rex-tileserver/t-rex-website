@@ -1,5 +1,11 @@
 title = "t-rex"
 base_url = "https://pka.github.io/t-rex/"
 generate_tags_pages = false
-highlight_code = true
 insert_anchor_links = true
+highlight_code = true
+# highlight_theme = "solarized-light"
+highlight_theme = "monokai"
+#highlight_theme = "gruvbox-dark"
+#highlight_theme = "material-dark"
+# highlight_theme = "kronuz"
+#highlight_theme = "inspired-github"

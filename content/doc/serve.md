@@ -1,5 +1,6 @@
 +++
 title = "Serving vector tiles"
+order = 2
 +++
 
 Serving vector tiles

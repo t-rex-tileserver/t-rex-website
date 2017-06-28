@@ -4,9 +4,8 @@
 
 {% block content %}
 <div id="contentgrid" class="ui grid">
-  <div class="three wide large screen only teal inverted column">
-      {% set toc = get_page(path="/toc.md") %}
-      {{ toc.content | safe }}
+  <div id="toc" class="three wide large screen only teal inverted column">
+    {{ macros::toc(selected=page) }}
   </div>
   <div class="thirteen wide olive inverted column">
     {{ page.content | safe }}
@@ -15,3 +14,22 @@
   </div>
 </div>
 {% endblock content %}
+
+{% block debug %}
+<h3>Page TOC</h3>
+{% for h1 in page.toc %}
+    <li>
+        <a href="{{h1.permalink}}">{{ h1.title }}</a>
+        {% if h1.children %}
+            <ul>
+                {% for h2 in h1.children %}
+                    <li>
+                        <a href="{{h2.permalink}}">{{ h2.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+{% endfor %}
+{{ super() }}
+{% endblock debug %}

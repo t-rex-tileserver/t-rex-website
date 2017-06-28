@@ -3,6 +3,10 @@
 {% block title %}{{ config.title }} - {{ section.title }}{% endblock title %}
 
 {% block content %}
+{{ section.content | safe }}
+{% endblock content %}
+
+{% block debug %}
 <h2>Pages</h2>
 <ul>
 {% for page in section.pages %}
@@ -15,4 +19,20 @@
     <li><a href="{{ subsection.permalink }}"{{ subsection.title }}</a></li>
 {% endfor %}
 </ul>
-{% endblock content %}
+<h3>Section TOC</h3>
+{% for h1 in section.toc %}
+    <li>
+        <a href="{{h1.permalink}}">{{ h1.title }}</a>
+        {% if h1.children %}
+            <ul>
+                {% for h2 in h1.children %}
+                    <li>
+                        <a href="{{h2.permalink}}">{{ h2.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+{% endfor %}
+{{ super() }}
+{% endblock debug %}

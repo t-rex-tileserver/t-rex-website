@@ -1,5 +1,6 @@
 +++
 title = "Generating vector tiles"
+order = 3
 +++
 
 Generating vector tiles
@@ -10,7 +11,7 @@ Cache generation
 
 A tile cache can be generated with the `t_rex generate` command:
 
-```
+```java
 USAGE:
     t_rex generate [OPTIONS] --config <FILE>
 

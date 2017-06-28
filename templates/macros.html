@@ -2,3 +2,24 @@
   <a class="{%if selected == "home"%}active{%endif%} item" href="/">Home</a>
   <a class="{%if selected == "doc"%}active{%endif%} item" href="/doc">Documentation</a>
 {% endmacro menu_entries %}
+
+{% macro toc(selected) %}
+  {% set doc = get_section(path="doc/_index.md") %}
+  {% for page in doc.pages | reverse %}
+    {% for h1 in page.toc %}
+        <li>
+            <a href="{{h1.permalink}}">{{ h1.title }}</a>
+            {%if selected == page%}*{%endif%}
+            {% if h1.children %}
+                <ul>
+                    {% for h2 in h1.children %}
+                        <li>
+                            <a href="{{h2.permalink}}">{{ h2.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+  {% endfor %}
+{% endmacro toc %}

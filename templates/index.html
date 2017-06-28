@@ -91,6 +91,19 @@
       display: none;
     }
 
+    p {
+      font-size: 16px;
+    }
+
+    pre {
+      padding: 1em;
+      margin-right: 1em;
+    }
+
+    #toc {
+      font-size: 1.2em;
+    }
+
     @media only screen and (max-width: 700px) {
       .ui.fixed.menu {
         display: none !important;
@@ -194,7 +207,6 @@
   </div>
 
   {% block content %}
-  <pre>{{ __tera_context | escape }}</pre>
   {% endblock content %}
 
   <div class="ui red inverted vertical footer segment">
@@ -225,7 +237,9 @@
       </div>
     </div>
   </div>
+  {% block debug %}
   <pre>{{ __tera_context | escape }}</pre>
+  {% endblock debug %}
 </div>
 
 </body>
