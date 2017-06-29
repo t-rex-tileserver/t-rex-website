@@ -9,8 +9,19 @@
   </div>
   <div class="thirteen wide olive inverted column">
     {{ page.content | safe }}
-    {% if page.previous %}<a href="{{page.previous.path}}">&lt;&lt; {{page.previous.title}}</a>&nbsp;&nbsp;{% endif %}
-    {% if page.next %}&nbsp;&nbsp;<a href="{{page.next.path}}">{{page.next.title}} &gt;&gt;</a>{% endif %}
+
+    <div class="ui grid">
+      <div class="ui eight wide column left aligned">
+      {% if page.previous %}
+        <a href="{{page.previous.path}}">◄{{page.previous.title}}</a>
+      {% endif %}
+      </div>
+      <div class="ui eight wide column right aligned">
+      {% if page.next %}
+        <a href="{{page.next.path}}">{{page.next.title}}►</a>
+      {% endif %}
+      </div>
+    </div>
   </div>
 </div>
 {% endblock content %}

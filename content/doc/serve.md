@@ -27,7 +27,7 @@ Run server with configuration file:
 Server options
 --------------
 
-```
+```java
 USAGE:
     t_rex serve [OPTIONS]
 
