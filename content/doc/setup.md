@@ -9,6 +9,32 @@ Setup
 Installation
 ------------
 
-Pre-built binaries are available for 64 bit Linux and Windows. Download your binary from [github.com/pka/t-rex/releases](https://github.com/pka/t-rex/releases) and unpack it.
+Pre-built binaries are available for 64 bit Linux, Mac and Windows.
 
-`t_rex` is an executable with very few dependencies, essentially `libgcc_s.so.1` on Linux and `msvcr120.dll` on Windows. If `msvcr120.dll` is missing, install `vcredist_x64.exe` from [here](https://www.microsoft.com/download/details.aspx?id=40784).
+<div class="vtab">
+
+### Linux (Generic)
+
+Download `t-rex-vX.Y.Z-x86_64-unknown-linux-gnu.tar.gz` from [github.com/pka/t-rex/releases](https://github.com/pka/t-rex/releases/latest) and unpack with `tar xzvf t-rex-vX.Y.Z-x86_64-unknown-linux-gnu.tar.gz`
+
+</div><div class="vtab">
+
+### Debian/Ubuntu
+
+Download `t-rex-vX.Y.Z-x86_64-unknown-linux-gnu.deb` from [github.com/pka/t-rex/releases](https://github.com/pka/t-rex/releases/latest) and install with `sudo dpkg -i t-rex-vX.Y.Z-x86_64-unknown-linux-gnu.deb`
+
+</div><div class="vtab">
+
+### Windows
+
+Download `t-rex-vX.Y.Z-x86_64-pc-windows-msvc.zip` from [github.com/pka/t-rex/releases](https://github.com/pka/t-rex/releases/latest) and unzip it.
+
+If `msvcr120.dll` is missing, install `vcredist_x64.exe` from [microsoft.com](https://www.microsoft.com/download/details.aspx?id=40784).
+
+</div><div class="vtab">
+
+### Mac
+
+Download `t-rex-vX.Y.Z-x86_64-apple-darwin.tar.gz` from [github.com/pka/t-rex/releases](https://github.com/pka/t-rex/releases/latest) and unpack with `tar xzvf t-rex-vX.Y.Z-x86_64-apple-darwin.tar.gz`
+
+</div>

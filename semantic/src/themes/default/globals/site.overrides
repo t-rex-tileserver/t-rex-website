@@ -17,3 +17,7 @@
 .ui.inverted.olive.stripe.segment {
   color: @black !important;
 }
+
+.olive .ui.vertical.tabular.menu .active.item {
+  background-color: @olive;
+}

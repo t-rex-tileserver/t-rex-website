@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div id="contentgrid" class="ui grid">
+  <div id="toc" class="three wide large screen only teal inverted column">
+    {{ macros::toc(selected=0) }}
+  </div>
+  <div class="thirteen wide olive inverted column">
+    {{ section.content | safe }}
+    <ul>
+    {% for page in section.pages | reverse %}
+        <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock content %}
