@@ -1,6 +1,8 @@
 {% macro menu_entries(selected) %}
-  <a class="{%if selected == "home"%}active{%endif%} item" href="/">Home</a>
-  <a class="{%if selected == "doc"%}active{%endif%} item" href="/doc">Documentation</a>
+  {% set home = get_section(path="_index.md") %}
+  {% set doc = get_section(path="doc/_index.md") %}
+  <a class="{%if selected == "home"%}active{%endif%} item" href="{{ home.permalink | safe }}">Home</a>
+  <a class="{%if selected == "doc"%}active{%endif%} item" href="{{ doc.permalink | safe }}">Documentation</a>
 {% endmacro menu_entries %}
 
 {% macro toc(selected) %}
