@@ -12,16 +12,16 @@
 
   {# Site Properties #}
   <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-  <link rel="stylesheet" type="text/css" href="{{ config.base_url | safe }}/semantic.min.css">
-  <link rel="stylesheet" type="text/css" href="{{ config.base_url | safe }}/site.css">
-  <link rel='stylesheet prefetch' href='{{ config.base_url | safe }}/components/icon.min.css'>
+  <link rel="stylesheet" type="text/css" href="{{config.base_url | safe}}/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="{{config.base_url | safe}}/site.css">
+  <link rel='stylesheet prefetch' href='{{config.base_url | safe}}/components/icon.min.css'>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
-  <script src="{{ config.base_url | safe }}/semantic.min.js"></script>
-  <script src="{{ config.base_url | safe }}/site.js"></script>
+  <script src="{{config.base_url | safe}}/semantic.min.js"></script>
+  <script src="{{config.base_url | safe}}/site.js"></script>
 </head>
 <body>
 
@@ -80,7 +80,7 @@
           <h4 class="ui inverted header">Usage</h4>
           <div class="ui inverted link list">
             <a href="https://github.com/pka/t-rex/releases/latest" class="item">Download</a>
-            <a href="{{ config.base_url | safe }}/doc/" class="item">Documentation</a>
+            <a href="{{config.base_url | safe}}/doc/" class="item">Documentation</a>
           </div>
         </div>
         <div class="seven wide column">
