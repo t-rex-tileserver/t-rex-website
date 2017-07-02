@@ -1,0 +1,198 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
+
+  
+  <title>t-rex - Serving vector tiles</title>
+  <link rel="stylesheet" type="text/css" href="/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/site.css">
+  <link rel='stylesheet prefetch' href='/components/icon.min.css'>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+  <script src="/semantic.min.js"></script>
+  <script src="/site.js"></script>
+</head>
+<body>
+
+
+<div class="ui large top fixed hidden red inverted menu">
+  <div class="ui container">
+    <div class="right menu">
+      <a class=" item" href="/">Home</a>
+  <a class="active item" href="/doc">Documentation</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="ui vertical red inverted sidebar menu">
+  <a class=" item" href="/">Home</a>
+  <a class="active item" href="/doc">Documentation</a>
+</div>
+
+
+<div class="pusher">
+  <div class="ui red inverted vertical masthead center aligned segment">
+
+    <div class="ui container">
+      <div class="ui large secondary inverted pointing menu">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <div class="right item">
+          <a class=" item" href="/">Home</a>
+  <a class="active item" href="/doc">Documentation</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui text container">
+      <h1 class="ui inverted header">
+      t-rex
+      </h1>
+      <h2>Create and serve your own vector tiles</h2>
+    </div>
+
+  </div>
+
+  
+<div id="contentgrid" class="ui grid">
+  <div id="toc" class="three wide large screen only teal inverted column">
+    <ul>
+  
+  <li>
+        <a class="" href="https://pka.github.io/t-rex-website/doc/setup/#setup">Setup</a>
+        <ul>
+            <li>
+                <a href="https://pka.github.io/t-rex-website/doc/setup/#installation">Installation</a>
+              </li>
+          </ul>
+      </li>
+  <li>
+        <a class="active" href="https://pka.github.io/t-rex-website/doc/serve/#serving-vector-tiles">Serving vector tiles</a>
+        <ul>
+            <li>
+                <a href="https://pka.github.io/t-rex-website/doc/serve/#usage">Usage</a>
+              </li>
+            <li>
+                <a href="https://pka.github.io/t-rex-website/doc/serve/#server-options">Server options</a>
+              </li>
+          </ul>
+      </li>
+  <li>
+        <a class="" href="https://pka.github.io/t-rex-website/doc/generate/#generating-vector-tiles">Generating vector tiles</a>
+        <ul>
+            <li>
+                <a href="https://pka.github.io/t-rex-website/doc/generate/#cache-generation">Cache generation</a>
+              </li>
+            <li>
+                <a href="https://pka.github.io/t-rex-website/doc/generate/#usage">Usage</a>
+              </li>
+          </ul>
+      </li>
+  <li>
+        <a class="" href="https://pka.github.io/t-rex-website/doc/configuration/#configuration">Configuration</a>
+        <ul>
+            <li>
+                <a href="https://pka.github.io/t-rex-website/doc/configuration/#layer-configuration">Layer configuration</a>
+              </li>
+            <li>
+                <a href="https://pka.github.io/t-rex-website/doc/configuration/#custom-tile-grids">Custom tile grids</a>
+              </li>
+            <li>
+                <a href="https://pka.github.io/t-rex-website/doc/configuration/#embedded-styling">Embedded styling</a>
+              </li>
+          </ul>
+      </li>
+  </ul>
+  </div>
+  <div class="thirteen wide olive inverted column">
+    <h1 id="serving-vector-tiles">Serving vector tiles</h1>
+<h2 id="usage">Usage</h2>
+<pre style="background-color:#272822">
+<span style="background-color:#272822;color:#f8f8f2;">t_rex serve --dbconn postgresql://user:pass@localhost/osm2vectortiles
+</span></pre>
+<p>Tiles are then served at <code>http://localhost:6767/{layer}/{z}/{x}/{y}.pbf</code></p>
+<p>A list of all detected layers is available at <a href="http://localhost:6767/">http://localhost:6767/</a></p>
+<p>Use a tile cache:</p>
+<pre style="background-color:#272822">
+<span style="background-color:#272822;color:#f8f8f2;">t_rex serve --dbconn postgresql://user:pass@localhost/osm2vectortiles --cache /tmp/mvtcache
+</span></pre>
+<p>Run server with configuration file:</p>
+<pre style="background-color:#272822">
+<span style="background-color:#272822;color:#f8f8f2;">t_rex serve --config osm2vectortiles.cfg
+</span></pre><h2 id="server-options">Server options</h2>
+<pre style="background-color:#272822">
+<span style="background-color:#272822;color:#ae81ff;">USAGE</span><span style="background-color:#272822;color:#f92672;">:</span><span style="background-color:#272822;color:#f8f8f2;">
+</span><span style="background-color:#272822;color:#f8f8f2;">    </span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">t_rex</span><span style="background-color:#272822;color:#f8f8f2;"> serve [</span><span style="background-color:#272822;color:#ae81ff;">OPTIONS</span><span style="background-color:#272822;color:#f8f8f2;">]
+</span><span style="background-color:#272822;color:#f8f8f2;">
+</span><span style="background-color:#272822;color:#ae81ff;">FLAGS</span><span style="background-color:#272822;color:#f92672;">:</span><span style="background-color:#272822;color:#f8f8f2;">
+</span><span style="background-color:#272822;color:#f8f8f2;">    </span><span style="background-color:#272822;color:#f92672;">-</span><span style="background-color:#272822;color:#f8f8f2;">h, </span><span style="background-color:#272822;color:#f92672;">--</span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">help</span><span style="background-color:#272822;color:#f8f8f2;">       Prints </span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">help</span><span style="background-color:#272822;color:#f8f8f2;"> information
+</span><span style="background-color:#272822;color:#f8f8f2;">    </span><span style="background-color:#272822;color:#f92672;">-</span><span style="background-color:#272822;color:#f8f8f2;">V, </span><span style="background-color:#272822;color:#f92672;">--</span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">version</span><span style="background-color:#272822;color:#f8f8f2;">    Prints </span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">version</span><span style="background-color:#272822;color:#f8f8f2;"> information
+</span><span style="background-color:#272822;color:#f8f8f2;">
+</span><span style="background-color:#272822;color:#ae81ff;">OPTIONS</span><span style="background-color:#272822;color:#f92672;">:</span><span style="background-color:#272822;color:#f8f8f2;">
+</span><span style="background-color:#272822;color:#f8f8f2;">        </span><span style="background-color:#272822;color:#f92672;">--</span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">cache</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">&lt;</span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">DIR</span><span style="background-color:#272822;color:#f8f8f2;">&gt;</span><span style="background-color:#272822;color:#f8f8f2;">              Use </span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">tile</span><span style="background-color:#272822;color:#f8f8f2;"> cache </span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">in</span><span style="background-color:#272822;color:#f8f8f2;"> DIR
+</span><span style="background-color:#272822;color:#f8f8f2;">        </span><span style="background-color:#272822;color:#f92672;">--</span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">clip</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">&lt;</span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">true</span><span style="background-color:#272822;color:#f8f8f2;">|</span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">false</span><span style="background-color:#272822;color:#f8f8f2;">&gt;</span><span style="background-color:#272822;color:#f8f8f2;">        Clip geometries
+</span><span style="background-color:#272822;color:#f8f8f2;">    </span><span style="background-color:#272822;color:#f92672;">-</span><span style="background-color:#272822;color:#f8f8f2;">c, </span><span style="background-color:#272822;color:#f92672;">--</span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">config</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">&lt;</span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">FILE</span><span style="background-color:#272822;color:#f8f8f2;">&gt;</span><span style="background-color:#272822;color:#f8f8f2;">            Load </span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">from</span><span style="background-color:#272822;color:#f8f8f2;"> custom </span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">config</span><span style="background-color:#272822;color:#f8f8f2;"> file
+</span><span style="background-color:#272822;color:#f8f8f2;">        </span><span style="background-color:#272822;color:#f92672;">--</span><span style="background-color:#272822;color:#f8f8f2;">dbconn </span><span style="background-color:#272822;color:#f92672;">&lt;</span><span style="background-color:#272822;color:#ae81ff;">SPEC</span><span style="background-color:#272822;color:#f92672;">&gt;</span><span style="background-color:#272822;color:#f8f8f2;">
+</span><span style="background-color:#272822;color:#f8f8f2;">            </span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">PostGIS</span><span style="background-color:#272822;color:#f8f8f2;"> connection postgresql</span><span style="background-color:#272822;color:#f92672;">:</span><span style="background-color:#272822;color:#75715e;">//</span><span style="background-color:#272822;color:#75715e;">USER@HOST/DBNAME
+</span><span style="background-color:#272822;color:#f8f8f2;">        </span><span style="background-color:#272822;color:#f92672;">--</span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">simplify</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">&lt;</span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">true</span><span style="background-color:#272822;color:#f8f8f2;">|</span><span style="background-color:#272822;font-style:italic;color:#66d9ef;">false</span><span style="background-color:#272822;color:#f8f8f2;">&gt;</span><span style="background-color:#272822;color:#f8f8f2;">    Simplify geometries
+</span></pre>
+
+    <div class="ui grid">
+      <div class="ui eight wide column left aligned">
+      <a href="/doc/setup/">◄Setup</a>
+      </div>
+      <div class="ui eight wide column right aligned">
+      <a href="/doc/generate/">Generating vector tiles►</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="ui red inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">Development</h4>
+          <div class="ui inverted link list">
+            <a href="https://github.com/pka/t-rex/" class="item">Github</a>
+            <a href="https://github.com/pka/t-rex/blob/master/CHANGELOG.md" class="item">Changelog</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Usage</h4>
+          <div class="ui inverted link list">
+            <a href="https://github.com/pka/t-rex/releases/latest" class="item">Download</a>
+            <a href="/doc/" class="item">Documentation</a>
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">t-rex</h4>
+          <p>Copyright &copy; 2016-2017 by Pirmin Kalberer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+
+</div>
+
+</body>
+
+</html>
