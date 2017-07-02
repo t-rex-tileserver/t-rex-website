@@ -1,6 +1,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-            <loc>https://pka.github.io/t-rex-website/doc/serve/</loc>
+            <loc>https://pka.github.io/t-rex-website/doc/configuration/</loc>
             
         </url>
     <url>
@@ -8,7 +8,7 @@
             
         </url>
     <url>
-            <loc>https://pka.github.io/t-rex-website/doc/configuration/</loc>
+            <loc>https://pka.github.io/t-rex-website/doc/serve/</loc>
             
         </url>
     <url>
@@ -16,10 +16,10 @@
             
         </url>
     <url>
-            <loc>https://pka.github.io/t-rex-website/</loc>
+            <loc>https://pka.github.io/t-rex-website/doc/</loc>
         </url>
     <url>
-            <loc>https://pka.github.io/t-rex-website/doc/</loc>
+            <loc>https://pka.github.io/t-rex-website/</loc>
         </url>
     
     
