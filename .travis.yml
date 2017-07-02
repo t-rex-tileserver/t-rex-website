@@ -3,6 +3,7 @@ language: rust
 
 before_script:
   - curl -s -L https://github.com/Keats/gutenberg/releases/download/v0.0.7/gutenberg-v0.0.7-x86_64-unknown-linux-gnu.tar.gz | tar xvzf -
+  - export PATH="$PATH:$PWD"
 
 script:
   - gutenberg build
@@ -11,6 +12,6 @@ after_success: |
   [ $TRAVIS_BRANCH = master ] &&
   [ $TRAVIS_PULL_REQUEST = false ] &&
   make gh-pages &&
-  git config user.name "gutenberg site deployer" &&
-  git config user.email "name@example.com" &&
+  git config user.name "Travis CI" &&
+  git config user.email "noreply@travis-ci.org" &&
   git push -fq https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git gh-pages
