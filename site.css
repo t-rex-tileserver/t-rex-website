@@ -2,10 +2,6 @@
   display: none;
 }
 
-div.pusher div.ui.red.inverted.vertical.masthead.center.aligned.segment {
-  background: url(/t-rex-ascii.svg) no-repeat 0 0em;
-}
-
 /*overrides*/
 .ui.inverted.grey.segment {
   color: black !important;
