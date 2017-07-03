@@ -4,10 +4,6 @@
             
         </url>
     <url>
-            <loc>https://pka.github.io/t-rex-website/doc/generate/</loc>
-            
-        </url>
-    <url>
             <loc>https://pka.github.io/t-rex-website/doc/serve/</loc>
             
         </url>
@@ -16,10 +12,14 @@
             
         </url>
     <url>
-            <loc>https://pka.github.io/t-rex-website/</loc>
+            <loc>https://pka.github.io/t-rex-website/doc/generate/</loc>
+            
         </url>
     <url>
             <loc>https://pka.github.io/t-rex-website/doc/</loc>
+        </url>
+    <url>
+            <loc>https://pka.github.io/t-rex-website/</loc>
         </url>
     
     
