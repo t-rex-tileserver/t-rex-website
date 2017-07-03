@@ -72,6 +72,7 @@
   {% block content %}
   {% endblock content %}
 
+  {% set doc = get_section(path="doc/_index.md") %}
   <div class="ui red inverted vertical footer segment">
     <div class="ui container">
       <div class="ui stackable inverted divided equal height stackable grid">
@@ -86,12 +87,14 @@
           <h4 class="ui inverted header">Usage</h4>
           <div class="ui inverted link list">
             <a href="https://github.com/pka/t-rex/releases/latest" class="item">Download</a>
-            <a href="{{config.base_url | safe}}/doc/" class="item">Documentation</a>
+            <a href="{{doc.permalink | safe}}" class="item">Documentation</a>
           </div>
         </div>
         <div class="seven wide column">
           <h4 class="ui inverted header">t-rex</h4>
-          <p>Copyright &copy; 2016-2017 by Pirmin Kalberer</p>
+          <div class="ui inverted link list">
+            <p class="item">Copyright &copy; 2016-2017 by Pirmin Kalberer</p>
+          </div>
         </div>
       </div>
     </div>
