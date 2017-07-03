@@ -1,5 +1,5 @@
 title = "t-rex"
-base_url = "https://pka.github.io/t-rex-website"
+base_url = "http://t-rex.tileserver.ch"
 generate_tags_pages = false
 insert_anchor_links = true
 highlight_code = true
