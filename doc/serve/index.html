@@ -127,17 +127,17 @@
     <h1 id="serving-vector-tiles">Serving vector tiles</h1>
 <h2 id="usage">Usage</h2>
 <pre style="background-color:#272822">
-<span style="background-color:#272822;color:#f8f8f2;">t_rex serve --dbconn postgresql://user:pass@localhost/osm2vectortiles
+<span style="background-color:#272822;color:#f8f8f2;">t_rex serve --dbconn postgresql://user:pass@localhost/mydb
 </span></pre>
 <p>Tiles are then served at <code>http://localhost:6767/{layer}/{z}/{x}/{y}.pbf</code></p>
 <p>A list of all detected layers is available at <a href="http://localhost:6767/">http://localhost:6767/</a></p>
 <p>Use a tile cache:</p>
 <pre style="background-color:#272822">
-<span style="background-color:#272822;color:#f8f8f2;">t_rex serve --dbconn postgresql://user:pass@localhost/osm2vectortiles --cache /tmp/mvtcache
+<span style="background-color:#272822;color:#f8f8f2;">t_rex serve --dbconn postgresql://user:pass@localhost/mydb --cache /tmp/mvtcache
 </span></pre>
 <p>Run server with configuration file:</p>
 <pre style="background-color:#272822">
-<span style="background-color:#272822;color:#f8f8f2;">t_rex serve --config osm2vectortiles.cfg
+<span style="background-color:#272822;color:#f8f8f2;">t_rex serve --config config.toml
 </span></pre><h2 id="server-options">Server options</h2>
 <pre style="background-color:#272822">
 <span style="background-color:#272822;color:#ae81ff;">USAGE</span><span style="background-color:#272822;color:#f92672;">:</span><span style="background-color:#272822;color:#f8f8f2;">
