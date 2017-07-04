@@ -9,7 +9,7 @@ Serving vector tiles
 Usage
 -----
 
-    t_rex serve --dbconn postgresql://user:pass@localhost/osm2vectortiles
+    t_rex serve --dbconn postgresql://user:pass@localhost/mydb
 
 Tiles are then served at `http://localhost:6767/{layer}/{z}/{x}/{y}.pbf`
 
@@ -17,11 +17,11 @@ A list of all detected layers is available at [http://localhost:6767/](http://lo
 
 Use a tile cache:
 
-    t_rex serve --dbconn postgresql://user:pass@localhost/osm2vectortiles --cache /tmp/mvtcache
+    t_rex serve --dbconn postgresql://user:pass@localhost/mydb --cache /tmp/mvtcache
 
 Run server with configuration file:
 
-    t_rex serve --config osm2vectortiles.cfg
+    t_rex serve --config config.toml
 
 
 Server options

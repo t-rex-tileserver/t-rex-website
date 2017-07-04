@@ -35,7 +35,7 @@ Usage
 
 Generate tiles for cache:
 
-    t_rex generate --config osm2vectortiles.cfg
+    t_rex generate --config config.toml
 
 
 ### MBTiles creation
