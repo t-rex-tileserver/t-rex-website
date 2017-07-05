@@ -130,13 +130,13 @@
     <h1 id="serving-vector-tiles">Serving vector tiles</h1>
 <h2 id="usage">Usage</h2>
 <pre style="background-color:#272822">
-<span style="background-color:#272822;color:#f8f8f2;">t_rex serve --dbconn postgresql://user:pass@localhost/mydb
+<span style="background-color:#272822;color:#f8f8f2;">t_rex serve --dbconn postgresql://user:pass@localhost/dbname
 </span></pre>
 <p>Tiles are then served at <code>http://localhost:6767/{layer}/{z}/{x}/{y}.pbf</code></p>
 <p>A list of all detected layers is available at <a href="http://localhost:6767/">http://localhost:6767/</a></p>
 <p>Use a tile cache:</p>
 <pre style="background-color:#272822">
-<span style="background-color:#272822;color:#f8f8f2;">t_rex serve --dbconn postgresql://user:pass@localhost/mydb --cache /tmp/mvtcache
+<span style="background-color:#272822;color:#f8f8f2;">t_rex serve --dbconn postgresql://user:pass@localhost/dbname --cache /tmp/mvtcache
 </span></pre>
 <p>Run server with configuration file:</p>
 <pre style="background-color:#272822">

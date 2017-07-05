@@ -131,7 +131,7 @@
 <p>Services can be configured in a text file with <a href="https://github.com/toml-lang/toml">TOML</a> syntax.</p>
 <p>A good starting point is the template generated with the <code>genconfig</code> command:</p>
 <pre style="background-color:#272822">
-<span style="background-color:#272822;color:#f8f8f2;">t_rex genconfig --dbconn postgresql://user:pass@localhost/mydb
+<span style="background-color:#272822;color:#f8f8f2;">t_rex genconfig --dbconn postgresql://user:pass@localhost/dbname
 </span></pre>
 <p>Configuration file example:</p>
 <pre style="background-color:#272822">
@@ -140,7 +140,7 @@
 </span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f8f8f2;">[</span><span style="background-color:#272822;color:#a6e22e;">datasource</span><span style="background-color:#272822;color:#f8f8f2;">]</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f92672;">type</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;postgis&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
-</span><span style="background-color:#272822;color:#f92672;">url</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;postgresql://user:pass@localhost/natural_earth_vectors&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
+</span><span style="background-color:#272822;color:#f92672;">url</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;postgresql://user:pass@localhost/dbname&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f8f8f2;">[</span><span style="background-color:#272822;color:#a6e22e;">grid</span><span style="background-color:#272822;color:#f8f8f2;">]</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f92672;">predefined</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;web_mercator&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
