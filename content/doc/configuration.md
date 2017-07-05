@@ -10,7 +10,7 @@ Services can be configured in a text file with [TOML](https://github.com/toml-la
 
 A good starting point is the template generated with the `genconfig` command:
 
-    t_rex genconfig --dbconn postgresql://user:pass@localhost/mydb
+    t_rex genconfig --dbconn postgresql://user:pass@localhost/dbname
 
 Configuration file example:
 
@@ -20,7 +20,7 @@ viewer = true
 
 [datasource]
 type = "postgis"
-url = "postgresql://user:pass@localhost/natural_earth_vectors"
+url = "postgresql://user:pass@localhost/dbname"
 
 [grid]
 predefined = "web_mercator"

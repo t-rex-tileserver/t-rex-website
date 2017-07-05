@@ -9,7 +9,7 @@ Serving vector tiles
 Usage
 -----
 
-    t_rex serve --dbconn postgresql://user:pass@localhost/mydb
+    t_rex serve --dbconn postgresql://user:pass@localhost/dbname
 
 Tiles are then served at `http://localhost:6767/{layer}/{z}/{x}/{y}.pbf`
 
@@ -17,7 +17,7 @@ A list of all detected layers is available at [http://localhost:6767/](http://lo
 
 Use a tile cache:
 
-    t_rex serve --dbconn postgresql://user:pass@localhost/mydb --cache /tmp/mvtcache
+    t_rex serve --dbconn postgresql://user:pass@localhost/dbname --cache /tmp/mvtcache
 
 Run server with configuration file:
 
