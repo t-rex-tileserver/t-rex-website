@@ -34,8 +34,9 @@
 }
 
 .ui.vertical.stripe p {
-  font-size: 1.33em;
+  font-size: 1.2em;
 }
+
 .stripe.segment .grid .column {
   padding-top: 3em;
   padding-bottom: 3em;
@@ -47,14 +48,6 @@
 
 .secondary.pointing.menu .toc.item {
   display: none;
-}
-
-p {
-  font-size: 1.1em;
-}
-
-a {
-  font-size: 1.1em;
 }
 
 pre {
@@ -79,7 +72,7 @@ pre {
 }
 
 #toc > ul > li {
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 2em;
 }
 
