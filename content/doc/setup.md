@@ -15,19 +15,25 @@ Pre-built binaries are available for 64 bit Linux, Mac and Windows.
 
 ### Linux (Generic)
 
-Download `t-rex-vX.Y.Z-x86_64-unknown-linux-gnu.tar.gz` from [github.com/pka/t-rex/releases](https://github.com/pka/t-rex/releases/latest) and unpack with `tar xzvf t-rex-vX.Y.Z-x86_64-unknown-linux-gnu.tar.gz`
+Download and unpack binary from [github.com](https://github.com/pka/t-rex/releases/latest):
+
+`curl -L https://github.com/pka/t-rex/releases/download/v0.7.5/t-rex-v0.7.5-x86_64-unknown-linux-gnu.tar.gz | tar xzvf -`
 
 </div><div class="vtab">
 
 ### Debian/Ubuntu
 
-Download `t-rex-vX.Y.Z-x86_64-unknown-linux-gnu.deb` from [github.com/pka/t-rex/releases](https://github.com/pka/t-rex/releases/latest) and install with `sudo dpkg -i t-rex-vX.Y.Z-x86_64-unknown-linux-gnu.deb`
+Download and install DEB package from [github.com](https://github.com/pka/t-rex/releases/latest):
+
+`curl -O -L https://github.com/pka/t-rex/releases/download/v0.7.5/t-rex-v0.7.5-x86_64-unknown-linux-gnu.deb && sudo dpkg -i t-rex-v0.7.5-x86_64-unknown-linux-gnu.deb`
 
 </div><div class="vtab">
 
 ### Windows
 
-Download `t-rex-vX.Y.Z-x86_64-pc-windows-msvc.zip` from [github.com/pka/t-rex/releases](https://github.com/pka/t-rex/releases/latest) and unzip it.
+Download and unzip binary from [github.com](https://github.com/pka/t-rex/releases/latest):
+
+[t-rex-v0.7.5-x86_64-pc-windows-msvc.zip](https://github.com/pka/t-rex/releases/download/v0.7.5/t-rex-v0.7.5-x86_64-pc-windows-msvc.zip)
 
 If `msvcr120.dll` is missing, install `vcredist_x64.exe` from [microsoft.com](https://www.microsoft.com/download/details.aspx?id=40784).
 
@@ -35,6 +41,8 @@ If `msvcr120.dll` is missing, install `vcredist_x64.exe` from [microsoft.com](ht
 
 ### Mac
 
-Download `t-rex-vX.Y.Z-x86_64-apple-darwin.tar.gz` from [github.com/pka/t-rex/releases](https://github.com/pka/t-rex/releases/latest) and unpack with `tar xzvf t-rex-vX.Y.Z-x86_64-apple-darwin.tar.gz`
+Download and unpack binary from [github.com](https://github.com/pka/t-rex/releases/latest):
+
+`curl -L https://github.com/pka/t-rex/releases/download/v0.7.5/t-rex-v0.7.5-x86_64-apple-darwin.tar.gz | tar xzvf -`
 
 </div>
