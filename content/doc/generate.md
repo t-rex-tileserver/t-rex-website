@@ -26,6 +26,7 @@ OPTIONS:
         --minzoom <LEVEL>                 Minimum zoom level
         --nodeno <NUM>                    Number of this nodes (0 <= n < nodes)
         --nodes <NUM>                     Number of generator nodes
+        --overwrite <false|true>          Overwrite previously cached tiles
         --progress <true|false>           Show progress bar
         --tileset <NAME>                  Tileset name
 ```
@@ -44,4 +45,4 @@ To create MBTiles files with vector tiles from a local cache you can use [MBUtil
 
 Example:
 
-    mb-util --image_format=pbf --scheme=tms /tmp/mvtcache/streets streets.mbtiles
+    mb-util --image_format=pbf /tmp/mvtcache/streets streets.mbtiles

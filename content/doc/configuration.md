@@ -70,6 +70,8 @@ port = 8080
 threads = 4
 ```
 
+The datasource url can be overridden by the environment variable `TREX_DATASOURCE_URL`, which takes precedence.
+
 ### Layer configuration
 
 Custom queries can be configured as PostGIS SQL queries.
