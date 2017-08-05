@@ -17,7 +17,7 @@ Pre-built binaries are available for 64 bit Linux, Mac and Windows.
 
 Download and unpack binary from [github.com](https://github.com/pka/t-rex/releases/latest):
 
-`curl -L https://github.com/pka/t-rex/releases/download/v0.7.7/t-rex-v0.7.7-x86_64-unknown-linux-gnu.tar.gz | tar xzvf -`
+`curl -L https://github.com/pka/t-rex/releases/download/v0.7.8/t-rex-v0.7.8-x86_64-unknown-linux-gnu.tar.gz | tar xzvf -`
 
 </div><div class="vtab">
 
@@ -25,7 +25,7 @@ Download and unpack binary from [github.com](https://github.com/pka/t-rex/releas
 
 Download and install DEB package from [github.com](https://github.com/pka/t-rex/releases/latest):
 
-`curl -O -L https://github.com/pka/t-rex/releases/download/v0.7.7/t-rex-v0.7.7-x86_64-unknown-linux-gnu.deb && sudo dpkg -i t-rex-v0.7.7-x86_64-unknown-linux-gnu.deb`
+`curl -O -L https://github.com/pka/t-rex/releases/download/v0.7.8/t-rex-v0.7.8-x86_64-unknown-linux-gnu.deb && sudo dpkg -i t-rex-v0.7.8-x86_64-unknown-linux-gnu.deb`
 
 </div><div class="vtab">
 
@@ -33,7 +33,7 @@ Download and install DEB package from [github.com](https://github.com/pka/t-rex/
 
 Download and unzip binary from [github.com](https://github.com/pka/t-rex/releases/latest):
 
-[t-rex-v0.7.7-x86_64-pc-windows-msvc.zip](https://github.com/pka/t-rex/releases/download/v0.7.7/t-rex-v0.7.7-x86_64-pc-windows-msvc.zip)
+[t-rex-v0.7.8-x86_64-pc-windows-msvc.zip](https://github.com/pka/t-rex/releases/download/v0.7.8/t-rex-v0.7.8-x86_64-pc-windows-msvc.zip)
 
 If `msvcr120.dll` is missing, install `vcredist_x64.exe` from [microsoft.com](https://www.microsoft.com/download/details.aspx?id=40784).
 
@@ -43,6 +43,6 @@ If `msvcr120.dll` is missing, install `vcredist_x64.exe` from [microsoft.com](ht
 
 Download and unpack binary from [github.com](https://github.com/pka/t-rex/releases/latest):
 
-`curl -L https://github.com/pka/t-rex/releases/download/v0.7.7/t-rex-v0.7.7-x86_64-apple-darwin.tar.gz | tar xzvf -`
+`curl -L https://github.com/pka/t-rex/releases/download/v0.7.8/t-rex-v0.7.8-x86_64-apple-darwin.tar.gz | tar xzvf -`
 
 </div>
