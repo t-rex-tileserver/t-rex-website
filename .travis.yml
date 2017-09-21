@@ -14,11 +14,12 @@ script:
 after_success: |
   [ $TRAVIS_BRANCH = master ] &&
   [ $TRAVIS_PULL_REQUEST = false ] &&
-  git remote add upstream "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" &&
+  git remote add upstream "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git"
   git fetch upstream &&
-  make gh-pages &&
-  git config user.name "Travis CI" &&
-  git config user.email "noreply@travis-ci.org" &&
+  gutenberg build &&
+  git checkout gh-pages && cp -r public/* .
+  git config user.name "Travis CI"
+  git config user.email "noreply@travis-ci.org"
   git add --all .
   git commit -a -m "rebuild pages" &&
   git push -q upstream HEAD:gh-pages
