@@ -120,7 +120,7 @@
                 <a href="http://t-rex.tileserver.ch/doc/configuration/#custom-tile-grids">Custom tile grids</a>
               </li>
             <li>
-                <a href="http://t-rex.tileserver.ch/doc/configuration/#embedded-styling">Embedded styling</a>
+                <a href="http://t-rex.tileserver.ch/doc/configuration/#embedded-styling-experimental">Embedded styling (Experimental)</a>
               </li>
           </ul>
       </li>
@@ -129,24 +129,35 @@
   <div class="thirteen wide olive inverted column">
     <h1 id="setup">Setup</h1>
 <h2 id="installation">Installation</h2>
-<p>Pre-built binaries are available for 64 bit Linux, Mac and Windows.</p>
 <div class="vtab">
-<h3 id="linux-generic">Linux (Generic)</h3>
-<p>Download and unpack binary from <a href="https://github.com/pka/t-rex/releases/latest">github.com</a>:</p>
-<p><code>curl -L https://github.com/pka/t-rex/releases/download/v0.7.8/t-rex-v0.7.8-x86_64-unknown-linux-gnu.tar.gz | tar xzvf -</code></p>
-</div><div class="vtab">
-<h3 id="debian-ubuntu">Debian/Ubuntu</h3>
-<p>Download and install DEB package from <a href="https://github.com/pka/t-rex/releases/latest">github.com</a>:</p>
-<p><code>curl -O -L https://github.com/pka/t-rex/releases/download/v0.7.8/t-rex-v0.7.8-x86_64-unknown-linux-gnu.deb &amp;&amp; sudo dpkg -i t-rex-v0.7.8-x86_64-unknown-linux-gnu.deb</code></p>
-</div><div class="vtab">
+<h3 id="ubuntu">Ubuntu</h3>
+<p>Add UbuntuGIS PPA <a href="https://launchpad.net/%7Eubuntugis/+archive/ubuntu/ppa">Stable</a> or <a href="https://launchpad.net/%7Eubuntugis/+archive/ubuntu/ubuntugis-unstable">Unstable</a>.</p>
+<p>Install GDAL 2.x library:</p>
+<pre style="background-color:#272822">
+<span style="background-color:#272822;color:#f8f8f2;">sudo apt-get install libgdal20
+</span></pre>
+<p>Download and install DEB package from <a href="https://github.com/t-rex-tileserver/t-rex/releases/latest">github.com</a>:</p>
+<pre style="background-color:#272822">
+<span style="background-color:#272822;color:#f8f8f2;">curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.8.0-beta1/t-rex-v0.8.0-beta1-x86_64-unknown-linux-gnu.deb &amp;&amp; sudo dpkg -i t-rex-0.8.0-beta1-x86_64-unknown-linux-gnu.deb
+</span></pre></div><div class="vtab">
 <h3 id="windows">Windows</h3>
-<p>Download and unzip binary from <a href="https://github.com/pka/t-rex/releases/latest">github.com</a>:</p>
-<p><a href="https://github.com/pka/t-rex/releases/download/v0.7.8/t-rex-v0.7.8-x86_64-pc-windows-msvc.zip">t-rex-v0.7.8-x86_64-pc-windows-msvc.zip</a></p>
-<p>If <code>msvcr120.dll</code> is missing, install <code>vcredist_x64.exe</code> from <a href="https://www.microsoft.com/download/details.aspx?id=40784">microsoft.com</a>.</p>
-</div><div class="vtab">
-<h3 id="mac">Mac</h3>
-<p>Download and unpack binary from <a href="https://github.com/pka/t-rex/releases/latest">github.com</a>:</p>
-<p><code>curl -L https://github.com/pka/t-rex/releases/download/v0.7.8/t-rex-v0.7.8-x86_64-apple-darwin.tar.gz | tar xzvf -</code></p>
+<p>Download MSI installer from <a href="https://github.com/t-rex-tileserver/t-rex/releases/latest">github.com</a>:</p>
+<p><a href="https://github.com/t-rex-tileserver/t-rex/releases/download/v0.8.0-beta1/t-rex-v0.8.0-beta1.msi">t-rex-v0.8.0-beta1.msi</a></p>
+<p>Double click to install (needs Administrator permissions).</p>
+<p>Run in Command Prompt window:</p>
+<pre style="background-color:#272822">
+<span style="background-color:#272822;color:#f8f8f2;">%programfiles%\t-rex\t_rex
+</span></pre></div><div class="vtab">
+<h3 id="docker">Docker</h3>
+<p>Install <a href="https://www.docker.com/community-edition#/download">Docker</a> on your platform.</p>
+<p>Download and run the t-rex Docker image:</p>
+<pre style="background-color:#272822">
+<span style="background-color:#272822;color:#f8f8f2;">docker pull sourcepole/t-rex
+</span><span style="background-color:#272822;color:#f8f8f2;">docker run sourcepole/t-rex --version
+</span><span style="background-color:#272822;color:#f8f8f2;">docker run -p 6767:6767 sourcepole/t-rex serve --bind=0.0.0.0 --openbrowser=false
+</span></pre>
+<p>The are two volumes for data input and data output. Argument example using input and output volumes:</p>
+<p><code>docker run -v $PWD:/var/data/in:ro -v /tmp:/var/data/out</code></p>
 </div>
 
 
@@ -169,14 +180,14 @@
         <div class="three wide column">
           <h4 class="ui inverted header">Development</h4>
           <div class="ui inverted link list">
-            <a href="https://github.com/pka/t-rex/" class="item">Github</a>
-            <a href="https://github.com/pka/t-rex/blob/master/CHANGELOG.md" class="item">Changelog</a>
+            <a href="https://github.com/t-rex-tileserver/t-rex/" class="item">Github</a>
+            <a href="https://github.com/t-rex-tileserver/t-rex/blob/master/CHANGELOG.md" class="item">Changelog</a>
           </div>
         </div>
         <div class="three wide column">
           <h4 class="ui inverted header">Usage</h4>
           <div class="ui inverted link list">
-            <a href="https://github.com/pka/t-rex/releases/latest" class="item">Download</a>
+            <a href="https://github.com/t-rex-tileserver/t-rex/releases/latest" class="item">Download</a>
             <a href="http://t-rex.tileserver.ch/doc/" class="item">Documentation</a>
           </div>
         </div>
