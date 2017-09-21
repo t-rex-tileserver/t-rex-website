@@ -36,10 +36,13 @@ FLAGS:
     -V, --version    Prints version information
 
 OPTIONS:
-        --cache <DIR>                 Use tile cache in DIR
-        --clip <true|false>           Clip geometries
-    -c, --config <FILE>               Load from custom config file
-        --dbconn <SPEC>               PostGIS connection postgresql://USER@HOST/DBNAME
-        --openbrowser <true|false>    Open backend URL in browser
-        --simplify <true|false>       Simplify geometries
+        --bind <IPADDRESS>                Bind web server to this address (0.0.0.0 for all)
+        --cache <DIR>                     Use tile cache in DIR
+        --clip <true|false>               Clip geometries
+    -c, --config <FILE>                   Load from custom config file
+        --datasource <FILE_OR_GDAL_DS>    GDAL datasource specification
+        --dbconn <SPEC>                   PostGIS connection postgresql://USER@HOST/DBNAME
+        --openbrowser <true|false>        Open backend URL in browser
+        --port <PORT>                     Bind web server to this port
+        --simplify <true|false>           Simplify geometries
 ```

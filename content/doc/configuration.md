@@ -18,9 +18,13 @@ Configuration file example:
 [service.mvt]
 viewer = true
 
-[datasource]
-type = "postgis"
-url = "postgresql://user:pass@localhost/dbname"
+[[datasource]]
+name = "buildings"
+dbconn = "postgresql://postgres@127.0.0.1/osm_buildings"
+
+[[datasource]]
+name = "natural_earth"
+path = "natural_earth.gpkg"
 
 [grid]
 predefined = "web_mercator"
@@ -30,6 +34,7 @@ name = "osm"
 
 [[tileset.layer]]
 name = "points"
+datasource = "natural_earth"
 # Select all attributes of table:
 table_name = "ne_10m_populated_places"
 geometry_field = "wkb_geometry"
@@ -38,6 +43,7 @@ fid_field = "id"
 
 [[tileset.layer]]
 name = "buildings"
+datasource = "buildings"
 geometry_field = "geometry"
 geometry_type = "POLYGON"
 fid_field = "osm_id"
@@ -90,17 +96,17 @@ If an `fid_field` is declared, this field is used as the feature ID.
 t-rex has two built-in grids, `web_mercator` and `wgs84`. Here's an example showing how to define a custom grid:
 
 ```toml
-[grid]
+[grid.user]
 width = 256
 height = 256
 extent = { minx = 2420000.0, miny = 1030000.0, maxx = 2900000.0, maxy = 1350000.0 }
 srid = 2056
-units = "M"
+units = "m"
 resolutions = [4000.0,3750.0,3500.0,3250.0,3000.0,2750.0,2500.0,2250.0,2000.0,1750.0,1500.0,1250.0,1000.0,750.0,650.0,500.0,250.0,100.0,50.0,20.0,10.0,5.0,2.5,2.0,1.5,1.0,0.5]
 origin = "TopLeft"
 ```
 
-### Embedded styling
+### Embedded styling (Experimental)
 
 t-rex supports embedded Mapbox GL styling according to the [Mapbox Style Specification (TOML)](https://pka.github.io/mapbox-gl-style-spec/).
 These styles are served in Mapbox GL JSON format which is used by Mapbox GL viewers, Maputnik and others.
