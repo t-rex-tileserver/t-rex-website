@@ -9,40 +9,54 @@ Setup
 Installation
 ------------
 
-Pre-built binaries are available for 64 bit Linux, Mac and Windows.
-
 <div class="vtab">
 
-### Linux (Generic)
+### Ubuntu
 
-Download and unpack binary from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
+Add UbuntuGIS PPA [Stable](https://launchpad.net/~ubuntugis/+archive/ubuntu/ppa) or [Unstable](https://launchpad.net/~ubuntugis/+archive/ubuntu/ubuntugis-unstable).
 
-`curl -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.7.8/t-rex-v0.7.8-x86_64-unknown-linux-gnu.tar.gz | tar xzvf -`
-
-</div><div class="vtab">
-
-### Debian/Ubuntu
+Install GDAL 2.x library:
+```
+sudo apt-get install libgdal20
+```
 
 Download and install DEB package from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
 
-`curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.7.8/t-rex-v0.7.8-x86_64-unknown-linux-gnu.deb && sudo dpkg -i t-rex-v0.7.8-x86_64-unknown-linux-gnu.deb`
+```
+curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.8.0-beta1/t-rex-v0.8.0-beta1-x86_64-unknown-linux-gnu.deb && sudo dpkg -i t-rex-0.8.0-beta1-x86_64-unknown-linux-gnu.deb
+```
 
 </div><div class="vtab">
 
 ### Windows
 
-Download and unzip binary from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
+Download MSI installer from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
 
-[t-rex-v0.7.8-x86_64-pc-windows-msvc.zip](https://github.com/t-rex-tileserver/t-rex/releases/download/v0.7.8/t-rex-v0.7.8-x86_64-pc-windows-msvc.zip)
+[t-rex-v0.8.0-beta1.msi](https://github.com/t-rex-tileserver/t-rex/releases/download/v0.8.0-beta1/t-rex-v0.8.0-beta1.msi)
 
-If `msvcr120.dll` is missing, install `vcredist_x64.exe` from [microsoft.com](https://www.microsoft.com/download/details.aspx?id=40784).
+Double click to install (needs Administrator permissions).
+
+Run in Command Prompt window:
+
+```
+%programfiles%\t-rex\t_rex
+```
 
 </div><div class="vtab">
 
-### Mac
+### Docker
 
-Download and unpack binary from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
+Install [Docker](https://www.docker.com/community-edition#/download) on your platform.
 
-`curl -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.7.8/t-rex-v0.7.8-x86_64-apple-darwin.tar.gz | tar xzvf -`
+Download and run the t-rex Docker image:
+```
+docker pull sourcepole/t-rex
+docker run sourcepole/t-rex --version
+docker run -p 6767:6767 sourcepole/t-rex serve --bind=0.0.0.0 --openbrowser=false
+```
+
+The are two volumes for data input and data output. Argument example using input and output volumes:
+
+`docker run -v $PWD:/var/data/in:ro -v /tmp:/var/data/out`
 
 </div>
