@@ -86,6 +86,9 @@
             <li>
                 <a href="http://t-rex.tileserver.ch/doc/setup/#installation">Installation</a>
               </li>
+            <li>
+                <a href="http://t-rex.tileserver.ch/doc/setup/#upgrading">Upgrading</a>
+              </li>
           </ul>
       </li>
   <li>
@@ -179,10 +182,20 @@
 </span><span style="background-color:#272822;color:#f8f8f2;">docker run sourcepole/t-rex --version
 </span><span style="background-color:#272822;color:#f8f8f2;">docker run -p 6767:6767 sourcepole/t-rex serve --bind=0.0.0.0 --openbrowser=false
 </span></pre>
-<p>The are two volumes for data input and data output. Argument example using input and output volumes:</p>
+<p>There are two volumes for data input and data output.</p>
+<p>Argument example using input and output volumes:</p>
 <p><code>docker run -v $PWD:/var/data/in:ro -v /tmp:/var/data/out</code></p>
 </div>
-
+<h2 id="upgrading">Upgrading</h2>
+<p>See the <a href="https://github.com/t-rex-tileserver/t-rex/blob/master/CHANGELOG.md">Changelog</a> for breaking changes in new versions.</p>
+<h3 id="0-7-x-0-8-0">0.7.x -> 0.8.0</h3>
+<p>Conversion to new datasource syntax:</p>
+<pre style="background-color:#272822">
+<span style="background-color:#272822;color:#f8f8f2;">sed -e &#39;s/\[datasource\]/[[datasource]]/g&#39; \
+</span><span style="background-color:#272822;color:#f8f8f2;">    </span><span style="background-color:#272822;color:#f8f8f2;">-e &#39;/type = &quot;postgis&quot;/d&#39; \
+</span><span style="background-color:#272822;color:#f8f8f2;">    </span><span style="background-color:#272822;color:#f8f8f2;">-e &#39;s/url =/dbconn =/g&#39;
+</span><span style="background-color:#272822;color:#f8f8f2;">    </span><span style="background-color:#272822;color:#f8f8f2;">infile.toml
+</span></pre>
 
     <div class="ui grid">
       <div class="ui eight wide column left aligned">
