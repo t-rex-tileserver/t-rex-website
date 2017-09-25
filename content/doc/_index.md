@@ -2,6 +2,7 @@
 title = "Documentation"
 sort_by = "order"
 template = "doc.html"
+insert_anchor = "right"
 +++
 
 t-rex Guide
