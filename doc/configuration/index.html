@@ -156,7 +156,7 @@
   </ul>
   </div>
   <div class="thirteen wide olive inverted column">
-    <h1 id="configuration">Configuration</h1>
+    <h1 id="configuration">Configuration <a class="anchor" href="#configuration" aria-label="Anchor link for: configuration"><i class="disabled tiny linkify icon"></i></a></h1>
 <p>Services can be configured in a text file with <a href="https://github.com/toml-lang/toml">TOML</a> syntax.</p>
 <p>A good starting point is the template generated with the <code>genconfig</code> command:</p>
 <pre style="background-color:#272822">
@@ -225,7 +225,7 @@
 </span><span style="background-color:#272822;color:#f92672;">threads</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#ae81ff;">4</span><span style="background-color:#272822;color:#f8f8f2;">
 </span></pre>
 <p>The datasource url can be overridden by the environment variable <code>TREX_DATASOURCE_URL</code>, which takes precedence.</p>
-<h3 id="layer-configuration">Layer configuration</h3>
+<h3 id="layer-configuration">Layer configuration <a class="anchor" href="#layer-configuration" aria-label="Anchor link for: layer-configuration"><i class="disabled tiny linkify icon"></i></a></h3>
 <p>Custom queries can be configured as PostGIS SQL queries.</p>
 <p>The following variables are replaced at runtime:</p>
 <ul>
@@ -235,7 +235,7 @@
 <li><code>!pixel_width!</code>: Width of pixel in grid units</li>
 </ul>
 <p>If an <code>fid_field</code> is declared, this field is used as the feature ID.</p>
-<h3 id="custom-tile-grids">Custom tile grids</h3>
+<h3 id="custom-tile-grids">Custom tile grids <a class="anchor" href="#custom-tile-grids" aria-label="Anchor link for: custom-tile-grids"><i class="disabled tiny linkify icon"></i></a></h3>
 <p>t-rex has two built-in grids, <code>web_mercator</code> and <code>wgs84</code>. Here's an example showing how to define a custom grid:</p>
 <pre style="background-color:#272822">
 <span style="background-color:#272822;color:#f8f8f2;">[</span><span style="background-color:#272822;color:#a6e22e;">grid.user</span><span style="background-color:#272822;color:#f8f8f2;">]</span><span style="background-color:#272822;color:#f8f8f2;">
@@ -246,7 +246,7 @@
 </span><span style="background-color:#272822;color:#f92672;">units</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;m&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f92672;">resolutions</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">[</span><span style="background-color:#272822;color:#ae81ff;">4000.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">3750.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">3500.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">3250.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">3000.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">2750.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">2500.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">2250.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">2000.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">1750.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">1500.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">1250.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">1000.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">750.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">650.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">500.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">250.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">100.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">50.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">20.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">10.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">5.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">2.5</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">2.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">1.5</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">1.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">0.5</span><span style="background-color:#272822;color:#f8f8f2;">]</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f92672;">origin</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;TopLeft&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
-</span></pre><h3 id="embedded-styling">Embedded styling</h3>
+</span></pre><h3 id="embedded-styling">Embedded styling <a class="anchor" href="#embedded-styling" aria-label="Anchor link for: embedded-styling"><i class="disabled tiny linkify icon"></i></a></h3>
 <p>t-rex has experimental support for embedded Mapbox GL styling according to the <a href="https://pka.github.io/mapbox-gl-style-spec/">Mapbox Style Specification (TOML)</a>.
 These styles are served in Mapbox GL JSON format which is used by Mapbox GL viewers, Maputnik and others.</p>
 <p>Example:</p>
@@ -267,7 +267,7 @@ These styles are served in Mapbox GL JSON format which is used by Mapbox GL view
       <a href="http://t-rex.tileserver.ch/doc/generate/">◄Generating vector tiles</a>
       </div>
       <div class="ui two wide column center aligned">
-        <a href="https://github.com/t-rex-tileserver/t-rex-website/edit/master/content/doc/configuration.md">Edit page</a> <i class="write icon"></i>
+        <a href="https://github.com/t-rex-tileserver/t-rex-website/edit/master/content/doc/configuration.md">Edit page <i class="write icon"></i></a>
       </div>
       <div class="ui seven wide column right aligned">
       <a href="http://t-rex.tileserver.ch/doc/reference/">Configuration Reference►</a>

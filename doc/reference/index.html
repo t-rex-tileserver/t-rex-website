@@ -156,9 +156,9 @@
   </ul>
   </div>
   <div class="thirteen wide olive inverted column">
-    <h1 id="configuration-reference">Configuration Reference</h1>
-<h2 id="service">service</h2>
-<h3 id="mvt">mvt</h3>
+    <h1 id="configuration-reference">Configuration Reference <a class="anchor" href="#configuration-reference" aria-label="Anchor link for: configuration-reference"><i class="disabled tiny linkify icon"></i></a></h1>
+<h2 id="service">service <a class="anchor" href="#service" aria-label="Anchor link for: service"><i class="disabled tiny linkify icon"></i></a></h2>
+<h3 id="mvt">mvt <a class="anchor" href="#mvt" aria-label="Anchor link for: mvt"><i class="disabled tiny linkify icon"></i></a></h3>
 <p>Mapbox Vector Tile service.</p>
 <p><code>viewer</code>: true | false</p>
 <p>Enable/Disable built-in viewer</p>
@@ -166,7 +166,7 @@
 <pre style="background-color:#272822">
 <span style="background-color:#272822;color:#f8f8f2;">[</span><span style="background-color:#272822;color:#a6e22e;">service.mvt</span><span style="background-color:#272822;color:#f8f8f2;">]</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f92672;">viewer</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#ae81ff;">true</span><span style="background-color:#272822;color:#f8f8f2;">
-</span></pre><h2 id="datasource">datasource</h2>
+</span></pre><h2 id="datasource">datasource <a class="anchor" href="#datasource" aria-label="Anchor link for: datasource"><i class="disabled tiny linkify icon"></i></a></h2>
 <p><code>name</code>: string</p>
 <p>Name of datasource</p>
 <p><code>default</code>: true | false</p>
@@ -189,14 +189,14 @@
 <span style="background-color:#272822;color:#f8f8f2;">[[</span><span style="background-color:#272822;color:#a6e22e;">datasource</span><span style="background-color:#272822;color:#f8f8f2;">]]</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f92672;">name</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;natural_earth&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f92672;">path</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;natural_earth.gpkg&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
-</span></pre><h2 id="grid">grid</h2>
+</span></pre><h2 id="grid">grid <a class="anchor" href="#grid" aria-label="Anchor link for: grid"><i class="disabled tiny linkify icon"></i></a></h2>
 <p><code>predefined</code>: &quot;web_mercator&quot; | &quot;wgs84&quot;</p>
 <p>Use a built-in grid.</p>
 <p>Example:</p>
 <pre style="background-color:#272822">
 <span style="background-color:#272822;color:#f8f8f2;">[</span><span style="background-color:#272822;color:#a6e22e;">grid</span><span style="background-color:#272822;color:#f8f8f2;">]</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f92672;">predefined</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;web_mercator&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
-</span></pre><h3 id="user">user</h3>
+</span></pre><h3 id="user">user <a class="anchor" href="#user" aria-label="Anchor link for: user"><i class="disabled tiny linkify icon"></i></a></h3>
 <p>Custom grid definition.</p>
 <p><code>width</code>: integer</p>
 <p>With of an individual tile in pixels.</p>
@@ -228,7 +228,7 @@ are expressed in “units-per-pixel”, depending on the unit used by the grid
 </span><span style="background-color:#272822;color:#f92672;">units</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;m&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f92672;">resolutions</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">[</span><span style="background-color:#272822;color:#ae81ff;">4000.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">3750.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">3500.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">3250.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">3000.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">2750.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">2500.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">2250.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">2000.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">1750.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">1500.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">1250.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">1000.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">750.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">650.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">500.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">250.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">100.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">50.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">20.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">10.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">5.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">2.5</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">2.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">1.5</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">1.0</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#ae81ff;">0.5</span><span style="background-color:#272822;color:#f8f8f2;">]</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f92672;">origin</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;TopLeft&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
-</span></pre><h2 id="tileset">tileset</h2>
+</span></pre><h2 id="tileset">tileset <a class="anchor" href="#tileset" aria-label="Anchor link for: tileset"><i class="disabled tiny linkify icon"></i></a></h2>
 <p><code>name</code>: string</p>
 <p>Tileset name.</p>
 <p><code>extent</code>: { minx: float, miny: float, maxx: float, maxy: float }</p>
@@ -237,7 +237,7 @@ are expressed in “units-per-pixel”, depending on the unit used by the grid
 <pre style="background-color:#272822">
 <span style="background-color:#272822;color:#f8f8f2;">[[</span><span style="background-color:#272822;color:#a6e22e;">tileset</span><span style="background-color:#272822;color:#f8f8f2;">]]</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f92672;">name</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;osm&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
-</span></pre><h3 id="style">style</h3>
+</span></pre><h3 id="style">style <a class="anchor" href="#style" aria-label="Anchor link for: style"><i class="disabled tiny linkify icon"></i></a></h3>
 <p>Inline style (see <code>tileset.layer.style</code>).</p>
 <p>Example:</p>
 <pre style="background-color:#272822">
@@ -245,7 +245,7 @@ are expressed in “units-per-pixel”, depending on the unit used by the grid
 </span><span style="background-color:#272822;color:#f92672;">type</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;background&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f8f8f2;">[</span><span style="background-color:#272822;color:#a6e22e;">tileset.style.paint</span><span style="background-color:#272822;color:#f8f8f2;">]</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f92672;">background-color</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;#f8f4f0&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
-</span></pre><h3 id="layer">layer</h3>
+</span></pre><h3 id="layer">layer <a class="anchor" href="#layer" aria-label="Anchor link for: layer"><i class="disabled tiny linkify icon"></i></a></h3>
 <p><code>name</code>: string</p>
 <p>Layer name.</p>
 <p><code>datasource</code>: string</p>
@@ -279,7 +279,7 @@ are expressed in “units-per-pixel”, depending on the unit used by the grid
 </span><span style="background-color:#272822;color:#f92672;">geometry_field</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;wkb_geometry&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f92672;">geometry_type</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;POINT&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f92672;">fid_field</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;id&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
-</span></pre><h4 id="query">query</h4>
+</span></pre><h4 id="query">query <a class="anchor" href="#query" aria-label="Anchor link for: query"><i class="disabled tiny linkify icon"></i></a></h4>
 <p><code>minzoom</code>: integer</p>
 <p>Minimal zoom level for using query.</p>
 <p><code>maxzoom</code>: integer</p>
@@ -302,7 +302,7 @@ are expressed in “units-per-pixel”, depending on the unit used by the grid
 </span><span style="background-color:#272822;color:#e6db74;">  </span><span style="background-color:#272822;color:#e6db74;">SELECT name, type, osm_id, geometry
 </span><span style="background-color:#272822;color:#e6db74;">  </span><span style="background-color:#272822;color:#e6db74;">FROM osm_buildings
 </span><span style="background-color:#272822;color:#e6db74;">  </span><span style="background-color:#272822;color:#e6db74;">WHERE geometry &amp;&amp; !bbox!</span><span style="background-color:#272822;color:#e6db74;">&quot;&quot;&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
-</span></pre><h3 id="style-1">style</h3>
+</span></pre><h3 id="style-1">style <a class="anchor" href="#style-1" aria-label="Anchor link for: style-1"><i class="disabled tiny linkify icon"></i></a></h3>
 <p>Embedded Mapbox GL style according to the <a href="https://pka.github.io/mapbox-gl-style-spec/">Mapbox Style Specification (TOML)</a>.</p>
 <p>Example:</p>
 <pre style="background-color:#272822">
@@ -319,8 +319,8 @@ are expressed in “units-per-pixel”, depending on the unit used by the grid
 </span><span style="background-color:#272822;color:#f8f8f2;">  </span><span style="background-color:#272822;color:#e6db74;">&quot;</span><span style="background-color:#272822;color:#e6db74;">fill-color</span><span style="background-color:#272822;color:#e6db74;">&quot;</span><span style="background-color:#272822;color:#f8f8f2;">:</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;</span><span style="background-color:#272822;color:#e6db74;">#d8e8c8</span><span style="background-color:#272822;color:#e6db74;">&quot;</span><span style="background-color:#272822;color:#f8f8f2;">,</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f8f8f2;">  </span><span style="background-color:#272822;color:#e6db74;">&quot;</span><span style="background-color:#272822;color:#e6db74;">fill-opacity</span><span style="background-color:#272822;color:#e6db74;">&quot;</span><span style="background-color:#272822;color:#f8f8f2;">:</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#ae81ff;">0.5</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f8f8f2;">}</span><span style="background-color:#272822;color:#f8f8f2;">
-</span></pre><h2 id="cache">cache</h2>
-<h3 id="file">file</h3>
+</span></pre><h2 id="cache">cache <a class="anchor" href="#cache" aria-label="Anchor link for: cache"><i class="disabled tiny linkify icon"></i></a></h2>
+<h3 id="file">file <a class="anchor" href="#file" aria-label="Anchor link for: file"><i class="disabled tiny linkify icon"></i></a></h3>
 <p>File system based tile cache.</p>
 <p>Directory layout: <code>&lt;base path&gt;/&lt;tileset name&gt;/&lt;z&gt;/&lt;x&gt;/&lt;y&gt;.pbf</code></p>
 <p><code>base</code>: string</p>
@@ -331,7 +331,7 @@ are expressed in “units-per-pixel”, depending on the unit used by the grid
 <pre style="background-color:#272822">
 <span style="background-color:#272822;color:#f8f8f2;">[</span><span style="background-color:#272822;color:#a6e22e;">cache.file</span><span style="background-color:#272822;color:#f8f8f2;">]</span><span style="background-color:#272822;color:#f8f8f2;">
 </span><span style="background-color:#272822;color:#f92672;">base</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#f8f8f2;">=</span><span style="background-color:#272822;color:#f8f8f2;"> </span><span style="background-color:#272822;color:#e6db74;">&quot;/var/cache/mvtcache&quot;</span><span style="background-color:#272822;color:#f8f8f2;">
-</span></pre><h2 id="webserver">webserver</h2>
+</span></pre><h2 id="webserver">webserver <a class="anchor" href="#webserver" aria-label="Anchor link for: webserver"><i class="disabled tiny linkify icon"></i></a></h2>
 <p><code>bind</code>: &quot;&lt;IP adress&gt;&quot;</p>
 <p>IP address of interface to bind web server (<code>0.0.0.0</code> for all).</p>
 <p>Default: <code>127.0.0.1</code></p>
@@ -356,7 +356,7 @@ are expressed in “units-per-pixel”, depending on the unit used by the grid
       <a href="http://t-rex.tileserver.ch/doc/configuration/">◄Configuration</a>
       </div>
       <div class="ui two wide column center aligned">
-        <a href="https://github.com/t-rex-tileserver/t-rex-website/edit/master/content/doc/reference.md">Edit page</a> <i class="write icon"></i>
+        <a href="https://github.com/t-rex-tileserver/t-rex-website/edit/master/content/doc/reference.md">Edit page <i class="write icon"></i></a>
       </div>
       <div class="ui seven wide column right aligned">
       
