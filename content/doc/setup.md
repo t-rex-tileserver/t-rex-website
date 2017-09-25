@@ -55,8 +55,26 @@ docker run sourcepole/t-rex --version
 docker run -p 6767:6767 sourcepole/t-rex serve --bind=0.0.0.0 --openbrowser=false
 ```
 
-The are two volumes for data input and data output. Argument example using input and output volumes:
+There are two volumes for data input and data output.
+
+Argument example using input and output volumes:
 
 `docker run -v $PWD:/var/data/in:ro -v /tmp:/var/data/out`
 
 </div>
+
+
+Upgrading
+---------
+
+See the [Changelog](https://github.com/t-rex-tileserver/t-rex/blob/master/CHANGELOG.md) for breaking changes in new versions.
+
+### 0.7.x -> 0.8.0
+
+Conversion to new datasource syntax:
+```
+sed -e 's/\[datasource\]/[[datasource]]/g' \
+    -e '/type = "postgis"/d' \
+    -e 's/url =/dbconn =/g'
+    infile.toml
+```
