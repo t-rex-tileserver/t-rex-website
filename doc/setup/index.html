@@ -100,6 +100,9 @@
             <li>
                 <a href="http://t-rex.tileserver.ch/doc/serve/#server-options">Server options</a>
               </li>
+            <li>
+                <a href="http://t-rex.tileserver.ch/doc/serve/#production-environments">Production environments</a>
+              </li>
           </ul>
       </li>
   <li>
@@ -172,7 +175,7 @@
 <p>Double click to install (needs Administrator permissions).</p>
 <p>Run in Command Prompt window:</p>
 <pre style="background-color:#272822">
-<span style="background-color:#272822;color:#f8f8f2;">%programfiles%\t-rex\t_rex
+<span style="background-color:#272822;color:#f8f8f2;">&quot;%programfiles%\t-rex\t_rex&quot;
 </span></pre></div><div class="vtab">
 <h3 id="docker">Docker</h3>
 <p>Install <a href="https://www.docker.com/community-edition#/download">Docker</a> on your platform.</p>
@@ -193,7 +196,7 @@
 <pre style="background-color:#272822">
 <span style="background-color:#272822;color:#f8f8f2;">sed -e &#39;s/\[datasource\]/[[datasource]]/g&#39; \
 </span><span style="background-color:#272822;color:#f8f8f2;">    </span><span style="background-color:#272822;color:#f8f8f2;">-e &#39;/type = &quot;postgis&quot;/d&#39; \
-</span><span style="background-color:#272822;color:#f8f8f2;">    </span><span style="background-color:#272822;color:#f8f8f2;">-e &#39;s/url =/dbconn =/g&#39;
+</span><span style="background-color:#272822;color:#f8f8f2;">    </span><span style="background-color:#272822;color:#f8f8f2;">-e &#39;s/url =/dbconn =/g&#39; \
 </span><span style="background-color:#272822;color:#f8f8f2;">    </span><span style="background-color:#272822;color:#f8f8f2;">infile.toml
 </span></pre>
 
