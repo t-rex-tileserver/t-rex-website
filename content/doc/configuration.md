@@ -106,9 +106,9 @@ resolutions = [4000.0,3750.0,3500.0,3250.0,3000.0,2750.0,2500.0,2250.0,2000.0,17
 origin = "TopLeft"
 ```
 
-### Embedded styling (Experimental)
+### Embedded styling
 
-t-rex supports embedded Mapbox GL styling according to the [Mapbox Style Specification (TOML)](https://pka.github.io/mapbox-gl-style-spec/).
+t-rex has experimental support for embedded Mapbox GL styling according to the [Mapbox Style Specification (TOML)](https://pka.github.io/mapbox-gl-style-spec/).
 These styles are served in Mapbox GL JSON format which is used by Mapbox GL viewers, Maputnik and others.
 
 Example:
