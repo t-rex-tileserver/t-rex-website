@@ -39,7 +39,7 @@ Double click to install (needs Administrator permissions).
 Run in Command Prompt window:
 
 ```
-%programfiles%\t-rex\t_rex
+"%programfiles%\t-rex\t_rex"
 ```
 
 </div><div class="vtab">
@@ -75,6 +75,6 @@ Conversion to new datasource syntax:
 ```
 sed -e 's/\[datasource\]/[[datasource]]/g' \
     -e '/type = "postgis"/d' \
-    -e 's/url =/dbconn =/g'
+    -e 's/url =/dbconn =/g' \
     infile.toml
 ```
