@@ -4,10 +4,6 @@
             
         </url>
     <url>
-            <loc>http://t-rex.tileserver.ch/doc/generate/</loc>
-            
-        </url>
-    <url>
             <loc>http://t-rex.tileserver.ch/doc/reference/</loc>
             
         </url>
@@ -16,14 +12,18 @@
             
         </url>
     <url>
+            <loc>http://t-rex.tileserver.ch/doc/generate/</loc>
+            
+        </url>
+    <url>
             <loc>http://t-rex.tileserver.ch/doc/serve/</loc>
             
         </url>
     <url>
-            <loc>http://t-rex.tileserver.ch/</loc>
+            <loc>http://t-rex.tileserver.ch/doc/</loc>
         </url>
     <url>
-            <loc>http://t-rex.tileserver.ch/doc/</loc>
+            <loc>http://t-rex.tileserver.ch/</loc>
         </url>
     
     
