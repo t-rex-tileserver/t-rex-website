@@ -1,10 +1,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-            <loc>http://t-rex.tileserver.ch/doc/setup/</loc>
+            <loc>http://t-rex.tileserver.ch/doc/generate/</loc>
             
         </url>
     <url>
-            <loc>http://t-rex.tileserver.ch/doc/reference/</loc>
+            <loc>http://t-rex.tileserver.ch/doc/setup/</loc>
             
         </url>
     <url>
@@ -12,18 +12,18 @@
             
         </url>
     <url>
-            <loc>http://t-rex.tileserver.ch/doc/generate/</loc>
-            
-        </url>
-    <url>
             <loc>http://t-rex.tileserver.ch/doc/serve/</loc>
             
         </url>
     <url>
-            <loc>http://t-rex.tileserver.ch/doc/</loc>
+            <loc>http://t-rex.tileserver.ch/doc/reference/</loc>
+            
         </url>
     <url>
             <loc>http://t-rex.tileserver.ch/</loc>
+        </url>
+    <url>
+            <loc>http://t-rex.tileserver.ch/doc/</loc>
         </url>
     
     
