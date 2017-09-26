@@ -11,7 +11,7 @@ Installation
 
 <div class="vtab">
 
-### Ubuntu
+### Ubuntu LTS
 
 Add UbuntuGIS PPA [Stable](https://launchpad.net/~ubuntugis/+archive/ubuntu/ppa) or [Unstable](https://launchpad.net/~ubuntugis/+archive/ubuntu/ubuntugis-unstable).
 
@@ -23,7 +23,7 @@ sudo apt-get install libgdal20
 Download and install DEB package from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
 
 ```
-curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.8.0-beta1/t-rex-v0.8.0-beta1-x86_64-unknown-linux-gnu.deb && sudo dpkg -i t-rex-0.8.0-beta1-x86_64-unknown-linux-gnu.deb
+curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.8.0/t-rex-v0.8.0-x86_64-unknown-linux-gnu.deb && sudo dpkg -i t-rex-v0.8.0-x86_64-unknown-linux-gnu.deb
 ```
 
 </div><div class="vtab">
@@ -32,7 +32,7 @@ curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.8.0-be
 
 Download MSI installer from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
 
-[t-rex-v0.8.0-beta1.msi](https://github.com/t-rex-tileserver/t-rex/releases/download/v0.8.0-beta1/t-rex-v0.8.0-beta1.msi)
+[t-rex-v0.8.0.msi](https://github.com/t-rex-tileserver/t-rex/releases/download/v0.8.0/t-rex-v0.8.0.msi)
 
 Double click to install (needs Administrator permissions).
 
