@@ -44,6 +44,7 @@ OPTIONS:
         --dbconn <SPEC>                   PostGIS connection postgresql://USER@HOST/DBNAME
         --openbrowser <true|false>        Open backend URL in browser
         --port <PORT>                     Bind web server to this port
+        --qgs <FILE>                      QGIS project file
         --simplify <true|false>           Simplify geometries
 ```
 

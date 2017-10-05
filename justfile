@@ -12,7 +12,7 @@ theme:
 	rm -rf static/components static/themes static/semantic*
 	cp -r semantic/dist/* static/
 
-bump oldversion='0.8.0-beta1' version='0.8.0':
+bump oldversion='0.8.0' version='0.8.1':
     sed --in-place 's/{{oldversion}}/{{version}}/g' content/doc/setup.md
 
 # https://github.com/Keats/gutenberg
