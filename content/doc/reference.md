@@ -138,6 +138,10 @@ Tileset name.
 
 Extent covered by tileset.
 
+`attribution:`: string
+
+Acknowledgment of ownership, authorship or copyright.
+
 Example:
 ```toml
 [[tileset]]
