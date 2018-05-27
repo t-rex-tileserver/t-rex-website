@@ -1,29 +1,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-            <loc>http://t-rex.tileserver.ch/doc/setup/</loc>
+    
+        <url>
+            <loc>t-rex.tileserver.ch/doc/configuration/</loc>
             
         </url>
-    <url>
-            <loc>http://t-rex.tileserver.ch/doc/serve/</loc>
+    
+        <url>
+            <loc>t-rex.tileserver.ch/doc/generate/</loc>
             
         </url>
-    <url>
-            <loc>http://t-rex.tileserver.ch/doc/reference/</loc>
+    
+        <url>
+            <loc>t-rex.tileserver.ch/doc/reference/</loc>
             
         </url>
-    <url>
-            <loc>http://t-rex.tileserver.ch/doc/configuration/</loc>
+    
+        <url>
+            <loc>t-rex.tileserver.ch/doc/serve/</loc>
             
         </url>
-    <url>
-            <loc>http://t-rex.tileserver.ch/doc/generate/</loc>
+    
+        <url>
+            <loc>t-rex.tileserver.ch/doc/setup/</loc>
             
         </url>
-    <url>
-            <loc>http://t-rex.tileserver.ch/doc/</loc>
+    
+    
+        <url>
+            <loc>t-rex.tileserver.ch/</loc>
         </url>
-    <url>
-            <loc>http://t-rex.tileserver.ch/</loc>
+    
+        <url>
+            <loc>t-rex.tileserver.ch/doc/</loc>
+        </url>
+    
+    
+        <url>
+            <loc>t-rex.tileserver.ch/categories/</loc>
         </url>
     
     
