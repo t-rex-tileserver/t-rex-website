@@ -16,7 +16,7 @@ bump oldversion='0.8.0' version='0.8.1':
     sed --in-place 's/{{oldversion}}/{{version}}/g' content/doc/setup.md
 
 # https://github.com/Keats/gutenberg
-@gutenberg version='0.1.3' dest='~/bin':
+@gutenberg version='0.3.3' dest='~/bin':
     echo Installing gutenberg
     curl -s -L https://github.com/Keats/gutenberg/releases/download/v{{version}}/gutenberg-v{{version}}-x86_64-unknown-linux-gnu.tar.gz | tar xzf - -C {{dest}}
     which gutenberg; gutenberg --version

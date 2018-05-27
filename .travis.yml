@@ -6,7 +6,7 @@ env:
   - secure: KdyVVnCKnkrgs53Zh3V1SlArR+k2JGS1gJmpauPi31MRJyj90rPmcyV6qxIS4kU1tiNIsf/1ZC7rrdmqgsP4+oqEtnHP038vUE/aeUeuht2ccjgzX1E6bsgd0JKa5PCzWfNCz4lDu9s93MKk98625DqmRKODbrfJqQYfWXncrAihkiWF83OP+HfVxMImapFYA1xCxiULU3EW0VuPBiZm+1ivKn+r2iRBTbpLPIV+Tt0MowM/Qov8gJrRnJwZD1y8wu9hf5AVguoO8reSTvpxggakWFQg4HH7axc9m1ze7qi/PqnnDoiHP581BLiEmIlhyTSeLk9gZvXEyJfhYZfeX+Yoz9HLnrq8MjXdBCZNcPf1+/sxw0A6h2IsFjXkdBu6+8pYuUngRVbqxco+19UG+XEDY1IXN5uxBriNKMKF58kjJ9u5ZrcVF9UgtCq6iOt38fj+lyVHPA5/VkGW9bBdmPibyg5jx6d0KxdIW3ENSVIxJKrZXZT8RsUCTrUL2E4SaUUF1AJuc4y4pasotVEncAEo4f8xWmrV5WHrrijwNKrVbErv9N/9BNrjKrMpnuidxjnLyy8+HjGUzzrzz0Ht8rienBAWMdx7It8cIfxL2JYjM1NBfvt+TlKPXDT/gHUrCqf0aYl+PBH3yz/Awpjfu3KkVWBK4nUlJevJYC4S0eA=
 
 before_script:
-  - curl -s -L https://github.com/Keats/gutenberg/releases/download/v0.1.3/gutenberg-v0.1.3-x86_64-unknown-linux-gnu.tar.gz | sudo tar xvzf - -C /usr/local/bin
+  - curl -s -L https://github.com/Keats/gutenberg/releases/download/v0.3.3/gutenberg-v0.3.3-x86_64-unknown-linux-gnu.tar.gz | sudo tar xvzf - -C /usr/local/bin
 
 script:
   - gutenberg build
