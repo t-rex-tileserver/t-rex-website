@@ -16,7 +16,7 @@ after_success: |
   [ $TRAVIS_PULL_REQUEST = false ] &&
   git remote add upstream "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git"
   git fetch upstream &&
-  gutenberg build &&
+  gutenberg build --base-url https://t-rex.tileserver.ch &&
   git checkout gh-pages && cp -r public/* .
   git config user.name "Travis CI"
   git config user.email "noreply@travis-ci.org"
