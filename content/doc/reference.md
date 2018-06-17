@@ -138,7 +138,7 @@ Tileset name.
 
 Extent covered by tileset.
 
-`attribution:`: string
+`attribution`: string
 
 Acknowledgment of ownership, authorship or copyright.
 
