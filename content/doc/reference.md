@@ -138,6 +138,25 @@ Tileset name.
 
 Extent covered by tileset.
 
+`minzoom`: integer
+
+Tileset `minzoom` controls from which zoom levels tiles are loaded. If your custom tile source only has tiles from z8, please set `minzoom: 8` so that Mapbox GL doesn't attempt to load z7/z6/... tiles. The default value of `minzoom` is 0.
+It enforce nothing and not linked with the layers `minzoom`.
+
+`maxzoom`: integer
+
+Tileset `maxzoom` controls from which zoom levels tiles are loaded. If your custom tile source only has tiles up to z14, please set `maxzoom: 14` so that Mapbox GL doesn't attempt to load z15/z16/... tiles. The default value of `maxzoom` is 22.
+It enforce nothing and not linked with the layers `maxzoom`.
+
+`center`: [float, float]
+
+Tileset default center: x, y.
+
+`start_zoom`: integer
+
+Tileset prefered zoom level.
+
+
 `attribution:`: string
 
 Acknowledgment of ownership, authorship or copyright.
