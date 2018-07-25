@@ -1,0 +1,43 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+        <url>
+            <loc>https://t-rex.tileserver.ch/dev/doc/configuration/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://t-rex.tileserver.ch/dev/doc/generate/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://t-rex.tileserver.ch/dev/doc/reference/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://t-rex.tileserver.ch/dev/doc/serve/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://t-rex.tileserver.ch/dev/doc/setup/</loc>
+            
+        </url>
+    
+    
+        <url>
+            <loc>https://t-rex.tileserver.ch/dev/</loc>
+        </url>
+    
+        <url>
+            <loc>https://t-rex.tileserver.ch/dev/doc/</loc>
+        </url>
+    
+    
+        <url>
+            <loc>https://t-rex.tileserver.ch/dev/categories/</loc>
+        </url>
+    
+    
+</urlset>

@@ -1,0 +1,117 @@
+.hidden.menu {
+  display: none;
+}
+
+/*overrides*/
+.ui.inverted.grey.segment {
+  color: black !important;
+}
+
+.masthead.segment {
+  min-height: 300px;
+  padding: 1em 0em;
+}
+.masthead .logo.item img {
+  margin-right: 1em;
+}
+.masthead .ui.menu .ui.button {
+  margin-left: 0.5em;
+}
+.masthead h1.ui.header {
+  margin-top: 0.2em;
+  margin-bottom: 0em;
+  font-size: 4em;
+  font-weight: normal;
+}
+.masthead h2 {
+  font-size: 1.7em;
+  font-weight: normal;
+}
+
+.ui.vertical.stripe h3 {
+  font-size: 2em;
+  padding-bottom: 0.5em;
+}
+
+.ui.vertical.stripe p {
+  font-size: 1.2em;
+}
+
+.stripe.segment .grid .column {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.footer.segment {
+  padding: 5em 0em;
+}
+
+.secondary.pointing.menu .toc.item {
+  display: none;
+}
+
+pre {
+  padding: 1em;
+  margin-right: 1em;
+}
+
+#toc ul {
+  list-style: none;
+}
+
+#toc > ul {
+  padding-left: 1em;
+}
+
+#toc > ul ul {
+  padding-left: 0;
+}
+
+#toc .active {
+  font-weight: bold;
+}
+
+#toc > ul > li {
+  font-size: 1.1em;
+  line-height: 2em;
+}
+
+#toc > ul > li ul li {
+  font-size: 0.9em;
+  border-left: 1px solid #424242;
+  padding: 0.4em 0 0.4em 1em;
+  line-height: 0.9em;
+}
+
+#toc a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .ui.fixed.menu {
+    display: none !important;
+  }
+  .secondary.pointing.menu .item,
+  .secondary.pointing.menu .menu {
+    display: none;
+  }
+  .secondary.pointing.menu .toc.item {
+    display: block;
+  }
+  .masthead.segment {
+    min-height: 350px;
+  }
+  .masthead h1.ui.header {
+    font-size: 2em;
+    margin-top: 1.5em;
+  }
+  .masthead h2 {
+    margin-top: 0.5em;
+    font-size: 1.5em;
+  }
+}
+
+#contentgrid {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
