@@ -11,9 +11,9 @@ Installation
 
 <div class="vtab">
 
-### Ubuntu LTS
+### Ubuntu
 
-Add UbuntuGIS PPA [Stable](https://launchpad.net/~ubuntugis/+archive/ubuntu/ppa) or [Unstable](https://launchpad.net/~ubuntugis/+archive/ubuntu/ubuntugis-unstable).
+t-rex requires `libgdal20`. For Xenial or older you can add UbuntuGIS PPA [Stable](https://launchpad.net/~ubuntugis/+archive/ubuntu/ppa) or [Unstable](https://launchpad.net/~ubuntugis/+archive/ubuntu/ubuntugis-unstable).
 
 Install GDAL 2.x library:
 ```
