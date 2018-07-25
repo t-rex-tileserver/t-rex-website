@@ -10,7 +10,7 @@ gh-pages:
 theme:
 	cd semantic && ../node_modules/.bin/gulp build
 	rm -rf static/components static/themes static/semantic*
-	cp -r semantic/dist/* static/
+	cp -r semantic/dist/semantic.min.* static/
 
 bump oldversion='0.8.0' version='0.8.1':
     sed --in-place 's/{{oldversion}}/{{version}}/g' content/doc/setup.md
