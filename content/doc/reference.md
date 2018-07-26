@@ -138,6 +138,26 @@ Tileset name.
 
 Extent covered by tileset.
 
+`minzoom`: integer
+
+Minimum zoom level for which tiles are available (Default: 0).  
+If unset, minzoom is deduced from layer and query minzoom limits.
+
+`maxzoom`: integer
+
+Maximum zoom level for which tiles are available (Default: 22).  
+If unset, maxzoom is deduced from layer and query maxzoom limits.  
+Viewers use data from tiles at the maxzoom when displaying the map at higher zoom levels.
+
+`center`: float, float
+
+Longitude, latitude of map center (in WGS84).  
+Viewers can use this value to set the default location.
+
+`start_zoom`: integer
+
+Start zoom level. Must be between `minzoom` and `maxzoom`.
+
 `attribution`: string
 
 Acknowledgment of ownership, authorship or copyright.
@@ -146,6 +166,7 @@ Example:
 ```toml
 [[tileset]]
 name = "osm"
+attribution = "© OpenStreetMap contributors"
 ```
 
 ### style
@@ -174,13 +195,19 @@ Name of datasource (see `[[datasource]]`). Default datasource is used, when name
 
 Name of geometry field.
 
-`geometry_type`:  "POINT" | "MULTIPOINT" | "LINESTRING" | "MULTILINESTRING" | "POLYGON" | "MULTIPOLYGON"
+`geometry_type`:  "POINT" | "MULTIPOINT" | "LINESTRING" | "MULTILINESTRING" | "POLYGON" | "MULTIPOLYGON" | "COMPOUNDCURVE" | "CURVEPOLYGON"
 
-Type of geometry in PostGIS database.
+Type of geometry in PostGIS database or in GDAL layer.  
+Curve geometry types are supported for PostGIS layers only.
 
 `srid`: integer
 
-Spatial reference system (PostGIS SRID).
+Spatial reference system (PostGIS SRID).  
+For GDAL layers this setting is ignored and always determined from the data source.
+
+`no_transform`: true | false
+
+Handle geometries as they were in grid SRS (Default: false).
 
 `fid_field`: string
 
@@ -188,11 +215,21 @@ Field name to be used as the feature ID.
 
 `table_name`: string
 
-Name of database table to select. 
+Name of database table or GDAL layer.
   
 `query_limit`: integer
 
 Maximal number of features to read for a single tile. 
+
+`minzoom`: integer
+
+Minimum zoom level for which tiles are available (Default: 0).  
+If unset, minzoom is deduced from query minzoom limits.
+
+`maxzoom`: integer
+
+Maximum zoom level for which tiles are available.  
+If unset, maxzoom is deduced from query maxzoom limits.
 
 `tile_size`: integer
 
@@ -202,12 +239,18 @@ Width and height of the tile (Default: 4096. Grid default size is 256)
 
 Simplify geometry (lines and polygons).
 
+Supported for PostGIS layer only.
+
 `buffer_size`: integer
 
-Tile buffer size in pixels.
+Tile buffer size in pixels.  
+When undefined, line and polygon geometries are not clipped.  
+Supported for PostGIS layer only.
 
-Geometries are not clipped when undefined.
+`make_valid`: true | false
 
+Fix invalid geometries (lines and polygons) before clipping. (Default: false)  
+Supported for PostGIS layer only.
 
 Example:
 ```toml
@@ -218,18 +261,17 @@ datasource = "natural_earth"
 table_name = "ne_10m_populated_places"
 geometry_field = "wkb_geometry"
 geometry_type = "POINT"
-fid_field = "id"
 ```
 
 #### query
 
 `minzoom`: integer
 
-Minimal zoom level for using query.
+Minimal zoom level for using this query.
 
 `maxzoom`: integer
 
-Maximal zoom level for using query.
+Maximal zoom level for using this query.
 
 `sql`: string
   
@@ -316,9 +358,7 @@ Default: `6767`
 
 `threads`: integer
 
-Number of parallel web server threads.
-
-Default: `4`
+Number of parallel web server threads. Defaults to number of available logical CPU's.
 
 `cache_control_max_age`: integer
 
@@ -330,5 +370,22 @@ Example:
 [webserver]
 bind = "0.0.0.0"
 port = 8080
-threads = 4
+```
+
+### static
+
+`dir`: string
+
+Directory to serve static files from.
+
+`path`: string
+
+HTTP path for accessing static files.
+
+
+Example:
+```toml
+[[webserver.static]]
+dir = "./public/"
+path = "/static"
 ```

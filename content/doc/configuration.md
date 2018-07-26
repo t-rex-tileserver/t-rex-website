@@ -39,19 +39,18 @@ datasource = "natural_earth"
 table_name = "ne_10m_populated_places"
 geometry_field = "wkb_geometry"
 geometry_type = "POINT"
-fid_field = "id"
 
 [[tileset.layer]]
 name = "buildings"
 datasource = "buildings"
 geometry_field = "geometry"
 geometry_type = "POLYGON"
-fid_field = "osm_id"
 # Clip polygons with a buffer
 buffer_size = 10
 simplify = true
   # Queries for different zoom levels:
   [[tileset.layer.query]]
+  minzoom = 0
   sql = """
     SELECT name, type, 0 as osm_id, ST_Union(geometry) AS geometry
     FROM osm_buildings_gen0
@@ -73,7 +72,6 @@ base = "/var/cache/mvtcache"
 [webserver]
 bind = "0.0.0.0"
 port = 8080
-threads = 4
 ```
 
 The datasource url can be overridden by the environment variable `TREX_DATASOURCE_URL`, which takes precedence.
