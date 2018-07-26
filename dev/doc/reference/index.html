@@ -150,6 +150,10 @@
                 <a href="https://t-rex.tileserver.ch/dev/doc/generate/#usage">Usage</a>
               </li>
             
+              <li>
+                <a href="https://t-rex.tileserver.ch/dev/doc/generate/#drilldown">Drilldown</a>
+              </li>
+            
           </ul>
         
       </li>
@@ -294,12 +298,25 @@ are expressed in “units-per-pixel”, depending on the unit used by the grid
 <p>Tileset name.</p>
 <p><code>extent</code>: { minx: float, miny: float, maxx: float, maxy: float }</p>
 <p>Extent covered by tileset.</p>
+<p><code>minzoom</code>: integer</p>
+<p>Minimum zoom level for which tiles are available (Default: 0).<br />
+If unset, minzoom is deduced from layer and query minzoom limits.</p>
+<p><code>maxzoom</code>: integer</p>
+<p>Maximum zoom level for which tiles are available (Default: 22).<br />
+If unset, maxzoom is deduced from layer and query maxzoom limits.<br />
+Viewers use data from tiles at the maxzoom when displaying the map at higher zoom levels.</p>
+<p><code>center</code>: float, float</p>
+<p>Longitude, latitude of map center (in WGS84).<br />
+Viewers can use this value to set the default location.</p>
+<p><code>start_zoom</code>: integer</p>
+<p>Start zoom level. Must be between <code>minzoom</code> and <code>maxzoom</code>.</p>
 <p><code>attribution</code>: string</p>
 <p>Acknowledgment of ownership, authorship or copyright.</p>
 <p>Example:</p>
 <pre style="background-color:#272822">
 <span style="background-color:#272822;color:#f8f8f2;">[[</span><span style="background-color:#272822;color:#a6e22e;">tileset</span><span style="background-color:#272822;color:#f8f8f2;">]]
 </span><span style="background-color:#272822;color:#f92672;">name </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;osm&quot;
+</span><span style="background-color:#272822;color:#f92672;">attribution </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;© OpenStreetMap contributors&quot;
 </span></pre><h3 id="style">style</h3>
 <p>Inline style (see <code>tileset.layer.style</code>).</p>
 <p>Example:</p>
@@ -315,23 +332,38 @@ are expressed in “units-per-pixel”, depending on the unit used by the grid
 <p>Name of datasource (see <code>[[datasource]]</code>). Default datasource is used, when name is undefined.</p>
 <p><code>geometry_field</code>: string</p>
 <p>Name of geometry field.</p>
-<p><code>geometry_type</code>:  &quot;POINT&quot; | &quot;MULTIPOINT&quot; | &quot;LINESTRING&quot; | &quot;MULTILINESTRING&quot; | &quot;POLYGON&quot; | &quot;MULTIPOLYGON&quot;</p>
-<p>Type of geometry in PostGIS database.</p>
+<p><code>geometry_type</code>:  &quot;POINT&quot; | &quot;MULTIPOINT&quot; | &quot;LINESTRING&quot; | &quot;MULTILINESTRING&quot; | &quot;POLYGON&quot; | &quot;MULTIPOLYGON&quot; | &quot;COMPOUNDCURVE&quot; | &quot;CURVEPOLYGON&quot;</p>
+<p>Type of geometry in PostGIS database or in GDAL layer.<br />
+Curve geometry types are supported for PostGIS layers only.</p>
 <p><code>srid</code>: integer</p>
-<p>Spatial reference system (PostGIS SRID).</p>
+<p>Spatial reference system (PostGIS SRID).<br />
+For GDAL layers this setting is ignored and always determined from the data source.</p>
+<p><code>no_transform</code>: true | false</p>
+<p>Handle geometries as they were in grid SRS (Default: false).</p>
 <p><code>fid_field</code>: string</p>
 <p>Field name to be used as the feature ID.</p>
 <p><code>table_name</code>: string</p>
-<p>Name of database table to select.</p>
+<p>Name of database table or GDAL layer.</p>
 <p><code>query_limit</code>: integer</p>
 <p>Maximal number of features to read for a single tile.</p>
+<p><code>minzoom</code>: integer</p>
+<p>Minimum zoom level for which tiles are available (Default: 0).<br />
+If unset, minzoom is deduced from query minzoom limits.</p>
+<p><code>maxzoom</code>: integer</p>
+<p>Maximum zoom level for which tiles are available.<br />
+If unset, maxzoom is deduced from query maxzoom limits.</p>
 <p><code>tile_size</code>: integer</p>
 <p>Width and height of the tile (Default: 4096. Grid default size is 256)</p>
 <p><code>simplify</code>: true | false</p>
 <p>Simplify geometry (lines and polygons).</p>
+<p>Supported for PostGIS layer only.</p>
 <p><code>buffer_size</code>: integer</p>
-<p>Tile buffer size in pixels.</p>
-<p>Geometries are not clipped when undefined.</p>
+<p>Tile buffer size in pixels.<br />
+When undefined, line and polygon geometries are not clipped.<br />
+Supported for PostGIS layer only.</p>
+<p><code>make_valid</code>: true | false</p>
+<p>Fix invalid geometries (lines and polygons) before clipping. (Default: false)<br />
+Supported for PostGIS layer only.</p>
 <p>Example:</p>
 <pre style="background-color:#272822">
 <span style="background-color:#272822;color:#f8f8f2;">[[</span><span style="background-color:#272822;color:#a6e22e;">tileset.layer</span><span style="background-color:#272822;color:#f8f8f2;">]]
@@ -341,12 +373,11 @@ are expressed in “units-per-pixel”, depending on the unit used by the grid
 </span><span style="background-color:#272822;color:#f92672;">table_name </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;ne_10m_populated_places&quot;
 </span><span style="background-color:#272822;color:#f92672;">geometry_field </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;wkb_geometry&quot;
 </span><span style="background-color:#272822;color:#f92672;">geometry_type </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;POINT&quot;
-</span><span style="background-color:#272822;color:#f92672;">fid_field </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;id&quot;
 </span></pre><h4 id="query">query</h4>
 <p><code>minzoom</code>: integer</p>
-<p>Minimal zoom level for using query.</p>
+<p>Minimal zoom level for using this query.</p>
 <p><code>maxzoom</code>: integer</p>
-<p>Maximal zoom level for using query.</p>
+<p>Maximal zoom level for using this query.</p>
 <p><code>sql</code>: string</p>
 <p>Explicit SQL query.</p>
 <p>The following variables are replaced at runtime:</p>
@@ -402,8 +433,7 @@ are expressed in “units-per-pixel”, depending on the unit used by the grid
 <p>Web server port number.</p>
 <p>Default: <code>6767</code></p>
 <p><code>threads</code>: integer</p>
-<p>Number of parallel web server threads.</p>
-<p>Default: <code>4</code></p>
+<p>Number of parallel web server threads. Defaults to number of available logical CPU's.</p>
 <p><code>cache_control_max_age</code>: integer</p>
 <p>Cache-Control headers set by web server.</p>
 <p>Example:</p>
@@ -411,7 +441,16 @@ are expressed in “units-per-pixel”, depending on the unit used by the grid
 <span style="background-color:#272822;color:#f8f8f2;">[</span><span style="background-color:#272822;color:#a6e22e;">webserver</span><span style="background-color:#272822;color:#f8f8f2;">]
 </span><span style="background-color:#272822;color:#f92672;">bind </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;0.0.0.0&quot;
 </span><span style="background-color:#272822;color:#f92672;">port </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#ae81ff;">8080
-</span><span style="background-color:#272822;color:#f92672;">threads </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#ae81ff;">4
+</span></pre><h3 id="static">static</h3>
+<p><code>dir</code>: string</p>
+<p>Directory to serve static files from.</p>
+<p><code>path</code>: string</p>
+<p>HTTP path for accessing static files.</p>
+<p>Example:</p>
+<pre style="background-color:#272822">
+<span style="background-color:#272822;color:#f8f8f2;">[[</span><span style="background-color:#272822;color:#a6e22e;">webserver.static</span><span style="background-color:#272822;color:#f8f8f2;">]]
+</span><span style="background-color:#272822;color:#f92672;">dir </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;./public/&quot;
+</span><span style="background-color:#272822;color:#f92672;">path </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;/static&quot;
 </span></pre>
 
     <div class="ui grid">
