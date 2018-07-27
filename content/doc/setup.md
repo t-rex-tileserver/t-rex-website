@@ -52,14 +52,18 @@ Download and run the t-rex Docker image:
 ```
 docker pull sourcepole/t-rex
 docker run sourcepole/t-rex --version
-docker run -p 6767:6767 sourcepole/t-rex serve --bind=0.0.0.0 --openbrowser=false
+docker run -p 6767:6767 sourcepole/t-rex serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml
 ```
 
-There are two volumes for data input and data output.
+The process is running as user `www-data` with the working directory `/var/data/in`. For output, a volume `/var/data/out` is available.
 
-Argument example using input and output volumes:
+Example using input and output volumes (Unix):
 
-`docker run -v $PWD:/var/data/in:ro -v /tmp:/var/data/out`
+`docker run -p 6767:6767 -v $PWD:/var/data/in:ro -v /tmp:/var/data/out sourcepole/t-rex serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml`
+
+Current directory on Windows:
+
+`docker run -p 6767:6767 -v %CD%:/var/data/in:ro sourcepole/t-rex serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml`
 
 </div>
 
