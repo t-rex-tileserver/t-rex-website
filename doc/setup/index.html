@@ -248,11 +248,13 @@
 <pre style="background-color:#272822">
 <span style="background-color:#272822;color:#f8f8f2;">docker pull sourcepole/t-rex
 </span><span style="background-color:#272822;color:#f8f8f2;">docker run sourcepole/t-rex --version
-</span><span style="background-color:#272822;color:#f8f8f2;">docker run -p 6767:6767 sourcepole/t-rex serve --bind=0.0.0.0 --openbrowser=false
+</span><span style="background-color:#272822;color:#f8f8f2;">docker run -p 6767:6767 sourcepole/t-rex serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml
 </span></pre>
-<p>There are two volumes for data input and data output.</p>
-<p>Argument example using input and output volumes:</p>
-<p><code>docker run -v $PWD:/var/data/in:ro -v /tmp:/var/data/out</code></p>
+<p>The process is running as user <code>www-data</code> with the working directory <code>/var/data/in</code>. For output, a volume <code>/var/data/out</code> is available.</p>
+<p>Example using input and output volumes (Unix):</p>
+<p><code>docker run -p 6767:6767 -v $PWD:/var/data/in:ro -v /tmp:/var/data/out sourcepole/t-rex serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml</code></p>
+<p>Current directory on Windows:</p>
+<p><code>docker run -p 6767:6767 -v %CD%:/var/data/in:ro sourcepole/t-rex serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml</code></p>
 </div>
 <h2 id="upgrading">Upgrading</h2>
 <p>See the <a href="https://github.com/t-rex-tileserver/t-rex/blob/master/CHANGELOG.md">Changelog</a> for breaking changes in new versions.</p>
