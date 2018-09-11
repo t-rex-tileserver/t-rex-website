@@ -245,6 +245,12 @@ Simplify geometry (lines and polygons).
 
 Supported for PostGIS layer only.
 
+`tolerance`: string
+
+Simplification tolerance (Default: !pixel_width!/2)
+
+Supported for PostGIS layer only.
+
 `buffer_size`: integer
 
 Tile buffer size in pixels.  
