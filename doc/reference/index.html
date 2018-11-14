@@ -96,62 +96,32 @@
   
     
       <li>
-        <a class="" href="https://t-rex.tileserver.ch/doc/setup/#setup">Setup</a>
+        <a class="active" href="https://t-rex.tileserver.ch/doc/reference/#configuration-reference">Configuration Reference</a>
         
           <ul>
             
               <li>
-                <a href="https://t-rex.tileserver.ch/doc/setup/#installation">Installation</a>
+                <a href="https://t-rex.tileserver.ch/doc/reference/#service">service</a>
               </li>
             
               <li>
-                <a href="https://t-rex.tileserver.ch/doc/setup/#upgrading">Upgrading</a>
-              </li>
-            
-          </ul>
-        
-      </li>
-    
-  
-    
-      <li>
-        <a class="" href="https://t-rex.tileserver.ch/doc/serve/#serving-vector-tiles">Serving vector tiles</a>
-        
-          <ul>
-            
-              <li>
-                <a href="https://t-rex.tileserver.ch/doc/serve/#usage">Usage</a>
+                <a href="https://t-rex.tileserver.ch/doc/reference/#datasource">datasource</a>
               </li>
             
               <li>
-                <a href="https://t-rex.tileserver.ch/doc/serve/#server-options">Server options</a>
+                <a href="https://t-rex.tileserver.ch/doc/reference/#grid">grid</a>
               </li>
             
               <li>
-                <a href="https://t-rex.tileserver.ch/doc/serve/#production-environments">Production environments</a>
-              </li>
-            
-          </ul>
-        
-      </li>
-    
-  
-    
-      <li>
-        <a class="" href="https://t-rex.tileserver.ch/doc/generate/#generating-vector-tiles">Generating vector tiles</a>
-        
-          <ul>
-            
-              <li>
-                <a href="https://t-rex.tileserver.ch/doc/generate/#cache-generation">Cache generation</a>
+                <a href="https://t-rex.tileserver.ch/doc/reference/#tileset">tileset</a>
               </li>
             
               <li>
-                <a href="https://t-rex.tileserver.ch/doc/generate/#usage">Usage</a>
+                <a href="https://t-rex.tileserver.ch/doc/reference/#cache">cache</a>
               </li>
             
               <li>
-                <a href="https://t-rex.tileserver.ch/doc/generate/#drilldown">Drilldown</a>
+                <a href="https://t-rex.tileserver.ch/doc/reference/#webserver">webserver</a>
               </li>
             
           </ul>
@@ -184,32 +154,62 @@
   
     
       <li>
-        <a class="active" href="https://t-rex.tileserver.ch/doc/reference/#configuration-reference">Configuration Reference</a>
+        <a class="" href="https://t-rex.tileserver.ch/doc/generate/#generating-vector-tiles">Generating vector tiles</a>
         
           <ul>
             
               <li>
-                <a href="https://t-rex.tileserver.ch/doc/reference/#service">service</a>
+                <a href="https://t-rex.tileserver.ch/doc/generate/#cache-generation">Cache generation</a>
               </li>
             
               <li>
-                <a href="https://t-rex.tileserver.ch/doc/reference/#datasource">datasource</a>
+                <a href="https://t-rex.tileserver.ch/doc/generate/#usage">Usage</a>
               </li>
             
               <li>
-                <a href="https://t-rex.tileserver.ch/doc/reference/#grid">grid</a>
+                <a href="https://t-rex.tileserver.ch/doc/generate/#drilldown">Drilldown</a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  
+    
+      <li>
+        <a class="" href="https://t-rex.tileserver.ch/doc/serve/#serving-vector-tiles">Serving vector tiles</a>
+        
+          <ul>
+            
+              <li>
+                <a href="https://t-rex.tileserver.ch/doc/serve/#usage">Usage</a>
               </li>
             
               <li>
-                <a href="https://t-rex.tileserver.ch/doc/reference/#tileset">tileset</a>
+                <a href="https://t-rex.tileserver.ch/doc/serve/#server-options">Server options</a>
               </li>
             
               <li>
-                <a href="https://t-rex.tileserver.ch/doc/reference/#cache">cache</a>
+                <a href="https://t-rex.tileserver.ch/doc/serve/#production-environments">Production environments</a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  
+    
+      <li>
+        <a class="" href="https://t-rex.tileserver.ch/doc/setup/#setup">Setup</a>
+        
+          <ul>
+            
+              <li>
+                <a href="https://t-rex.tileserver.ch/doc/setup/#installation">Installation</a>
               </li>
             
               <li>
-                <a href="https://t-rex.tileserver.ch/doc/reference/#webserver">webserver</a>
+                <a href="https://t-rex.tileserver.ch/doc/setup/#upgrading">Upgrading</a>
               </li>
             
           </ul>
@@ -312,6 +312,10 @@ Viewers use data from tiles at the maxzoom when displaying the map at higher zoo
 Viewers can use this value to set the default location.</p>
 <p><code>start_zoom</code>: integer</p>
 <p>Start zoom level. Must be between <code>minzoom</code> and <code>maxzoom</code>.</p>
+<p><code>cache_limits</code>: { minzoom: integer, maxzoom: integer, no_cache: boolean }</p>
+<p>Optional limits of zoom levels which should be cached. Tiles in other zoom levels,
+or all if <code>no_cache</code> is <code>true</code>, are served from live data.</p>
+<p>Default: <code>cache_limits = {minzoom = 0, maxzoom = 22, no_cache = false}</code></p>
 <p><code>attribution</code>: string</p>
 <p>Acknowledgment of ownership, authorship or copyright.</p>
 <p>Example:</p>
@@ -358,6 +362,9 @@ If unset, maxzoom is deduced from query maxzoom limits.</p>
 <p>Width and height of the tile (Default: 4096. Grid default size is 256)</p>
 <p><code>simplify</code>: true | false</p>
 <p>Simplify geometry (lines and polygons).</p>
+<p>Supported for PostGIS layer only.</p>
+<p><code>tolerance</code>: string</p>
+<p>Simplification tolerance (Default: !pixel_width!/2)</p>
 <p>Supported for PostGIS layer only.</p>
 <p><code>buffer_size</code>: integer</p>
 <p>Tile buffer size in pixels.<br />
@@ -457,8 +464,6 @@ Supported for PostGIS layer only.</p>
 
     <div class="ui grid">
       <div class="ui seven wide column left aligned">
-      
-        <a href="https://t-rex.tileserver.ch/doc/configuration/">◄Configuration</a>
       
       </div>
       <div class="ui two wide column center aligned">
