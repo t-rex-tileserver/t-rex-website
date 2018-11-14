@@ -1,6 +1,6 @@
 +++
 title = "Configuration Reference"
-order = 5
+weight = 5
 +++
 
 Configuration Reference

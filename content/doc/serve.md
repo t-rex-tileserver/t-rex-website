@@ -1,6 +1,6 @@
 +++
 title = "Serving vector tiles"
-order = 2
+weight = 2
 +++
 
 Serving vector tiles

@@ -1,6 +1,6 @@
 +++
 title = "Documentation"
-sort_by = "order"
+sort_by = "weight"
 template = "doc.html"
 insert_anchor = "right"
 +++

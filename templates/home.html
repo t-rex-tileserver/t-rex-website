@@ -1,5 +1,7 @@
 {% extends "index.html" %}
 
+{% import "macros.html" as macros %}
+
 {% block setmenu %}{% set curmenu = "home" %}{% endblock setmenu %}
 
 {% block title %}{{ config.title }} - {{ section.title }}{% endblock title %}

@@ -1,6 +1,6 @@
 +++
 title = "Configuration"
-order = 4
+weight = 4
 +++
 
 Configuration

@@ -1,6 +1,6 @@
 +++
 title = "Generating vector tiles"
-order = 3
+weight = 3
 +++
 
 Generating vector tiles

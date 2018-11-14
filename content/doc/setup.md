@@ -1,6 +1,6 @@
 +++
 title = "Setup"
-order = 1
+weight = 1
 +++
 
 Setup
