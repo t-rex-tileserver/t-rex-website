@@ -13,6 +13,19 @@ Some tasks are automated in a [Justfile](https://github.com/casey/just/).
 * `just`: Serve site
 * `just --list`: List all tasks
 
+Update documentation after a release:
+
+```
+git checkout master
+just bump 0.9.0 0.9.1
+git commit -a -m "v0.9.1"
+git checkout release
+git merge master
+git push
+git checkout master
+git push
+```
+
 Updating semantic-ui theme:
 
     npm install
