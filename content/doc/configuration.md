@@ -74,7 +74,12 @@ bind = "0.0.0.0"
 port = 8080
 ```
 
-The datasource url can be overridden by the environment variable `TREX_DATASOURCE_URL`, which takes precedence.
+The configuration can include environment variables in the form of `${VARNAME}`. Example:
+
+```
+dbconn = "postgresql://${PGUSER}:${PGPASSWORD}@${PGHOST}/osm_buildings"
+```
+
 
 ### Layer configuration
 
