@@ -162,6 +162,13 @@ Viewers can use this value to set the default location.
 
 Start zoom level. Must be between `minzoom` and `maxzoom`.
 
+`cache_limits`: { minzoom: integer, maxzoom: integer, no_cache: boolean }
+
+Optional limits of zoom levels which should be cached. Tiles in other zoom levels,
+or all if `no_cache` is `true`, are served from live data.
+
+Default: `cache_limits = {minzoom = 0, maxzoom = 22, no_cache = false}`
+
 `attribution`: string
 
 Acknowledgment of ownership, authorship or copyright.
