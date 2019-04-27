@@ -23,7 +23,7 @@ sudo apt-get install libgdal20
 Download and install DEB package from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
 
 ```
-curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.9.1/t-rex-v0.9.1-x86_64-unknown-linux-gnu.deb && sudo dpkg -i t-rex-v0.9.1-x86_64-unknown-linux-gnu.deb
+curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.9.2/t-rex-v0.9.2-x86_64-unknown-linux-gnu.deb && sudo dpkg -i t-rex-v0.9.2-x86_64-unknown-linux-gnu.deb
 ```
 
 </div><div class="vtab">
@@ -32,7 +32,7 @@ curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.9.1/t-
 
 Download MSI installer from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
 
-[t-rex-v0.9.1.msi](https://github.com/t-rex-tileserver/t-rex/releases/download/v0.9.1/t-rex-v0.9.1.msi)
+[t-rex-v0.9.2.msi](https://github.com/t-rex-tileserver/t-rex/releases/download/v0.9.2/t-rex-v0.9.2.msi)
 
 Double click to install (needs Administrator permissions).
 
