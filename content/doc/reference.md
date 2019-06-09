@@ -269,6 +269,11 @@ Supported for PostGIS layer only.
 Fix invalid geometries (lines and polygons) before clipping. (Default: false)  
 Supported for PostGIS layer only.
 
+`shift_longitude`: true | false
+
+Apply `ST_ShiftLongitude` to (transformed) bbox. (Default: false)
+Supported for PostGIS layer only.
+
 Example:
 ```toml
 [[tileset.layer]]
