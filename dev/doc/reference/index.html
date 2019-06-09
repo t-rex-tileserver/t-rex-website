@@ -373,6 +373,9 @@ Supported for PostGIS layer only.</p>
 <p><code>make_valid</code>: true | false</p>
 <p>Fix invalid geometries (lines and polygons) before clipping. (Default: false)<br />
 Supported for PostGIS layer only.</p>
+<p><code>shift_longitude</code>: true | false</p>
+<p>Apply <code>ST_ShiftLongitude</code> to (transformed) bbox. (Default: false)
+Supported for PostGIS layer only.</p>
 <p>Example:</p>
 <pre style="background-color:#272822">
 <span style="background-color:#272822;color:#f8f8f2;">[[</span><span style="background-color:#272822;color:#a6e22e;">tileset.layer</span><span style="background-color:#272822;color:#f8f8f2;">]]
