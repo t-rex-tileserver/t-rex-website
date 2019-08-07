@@ -74,11 +74,16 @@ bind = "0.0.0.0"
 port = 8080
 ```
 
+The configuration can be extended with [template](https://tera.netlify.com/docs/templates/) commands.
+See [templated.toml](https://github.com/t-rex-tileserver/t-rex/blob/master/examples/templated.toml) as an example.
+
 The configuration can include environment variables in the form of `env.VARNAME`. Example:
 
 ```
 dbconn = "postgresql://{{env.PGUSER}}:{{env.PGPASSWORD}}@{{env.PGHOST}}/osm_buildings"
 ```
+
+Environment variables are also loaded from a file named `.env` in the current directory or any of its parents.
 
 
 ### Layer configuration
