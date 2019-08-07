@@ -108,22 +108,3 @@ units = "m"
 resolutions = [4000.0,3750.0,3500.0,3250.0,3000.0,2750.0,2500.0,2250.0,2000.0,1750.0,1500.0,1250.0,1000.0,750.0,650.0,500.0,250.0,100.0,50.0,20.0,10.0,5.0,2.5,2.0,1.5,1.0,0.5]
 origin = "TopLeft"
 ```
-
-### Embedded styling
-
-t-rex has experimental support for embedded Mapbox GL styling according to the [Mapbox Style Specification (TOML)](https://pka.github.io/mapbox-gl-style-spec/).
-These styles are served in Mapbox GL JSON format which is used by Mapbox GL viewers, Maputnik and others.
-
-Example:
-
-```toml
-[[tileset.layer]]
-name = "Countries"
-table_name = "admin_0_countries"
-# ...
-[tileset.layer.style]
-  type = "fill"
-  [tileset.layer.style.paint]
-  fill-color = "#d8e8c8"
-  fill-opacity = 0.5
-```

@@ -180,18 +180,6 @@ name = "osm"
 attribution = "© OpenStreetMap contributors"
 ```
 
-### style
-
-Inline style (see `tileset.layer.style`).
-
-Example:
-```toml
-[tileset.style]
-type = "background"
-[tileset.style.paint]
-background-color = "#f8f4f0"
-```
-
 ### layer
 
 `name`: string
@@ -315,29 +303,6 @@ sql = """
   SELECT name, type, osm_id, geometry
   FROM osm_buildings
   WHERE geometry && !bbox!"""
-```
-
-### style
-
-Embedded Mapbox GL style according to the [Mapbox Style Specification (TOML)](https://pka.github.io/mapbox-gl-style-spec/).
-
-Example:
-
-```toml
-[tileset.layer.style]
-type = "fill"
-[tileset.layer.style.paint]
-fill-color = "#d8e8c8"
-fill-opacity = 0.5
-```
-
-This style will be converted to GL JSON format:
-```json
-"type": "fill",
-"paint": {
-  "fill-color": "#d8e8c8",
-  "fill-opacity": 0.5
-}
 ```
 
 cache
