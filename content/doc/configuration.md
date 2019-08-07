@@ -74,10 +74,10 @@ bind = "0.0.0.0"
 port = 8080
 ```
 
-The configuration can include environment variables in the form of `${VARNAME}`. Example:
+The configuration can include environment variables in the form of `env.VARNAME`. Example:
 
 ```
-dbconn = "postgresql://${PGUSER}:${PGPASSWORD}@${PGHOST}/osm_buildings"
+dbconn = "postgresql://{{env.PGUSER}}:{{env.PGPASSWORD}}@{{env.PGHOST}}/osm_buildings"
 ```
 
 
