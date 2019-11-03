@@ -63,7 +63,7 @@ OPTIONS:
 Production environments
 -----------------------
 
-Usually, generated tiles are served as static files from a web server like Apache or Nginx. If real-time updates are needed, Apache or Nginx can to act as a proxy webserver.
+Usually, generated tiles are served as static files from a web server like Apache or Nginx. If real-time updates are needed, Apache or Nginx can be configured to act as a proxy webserver.
 
 Configuration examples:
 

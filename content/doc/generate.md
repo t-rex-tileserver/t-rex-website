@@ -54,7 +54,7 @@ Drilldown
 
 For analyzing and testing tileset configurations, a `drilldown` command collects statistics at given coordinates.
 
-The statistics is printed to standard output and formatted as CSV. 
+The statistics are printed to standard output and formatted as CSV.
 
 ```java
 USAGE:
