@@ -12,8 +12,9 @@ script:
   - gutenberg build
 
 after_success: |
-  [ $TRAVIS_BRANCH != gh-pages ] &&
-  [ $TRAVIS_PULL_REQUEST = false ] &&
+  [ $TRAVIS_BRANCH = gh-pages ] && exit 0
+  [ $TRAVIS_PULL_REQUEST = true ] && exit 0
+
   git remote add upstream "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" &&
   git config user.name "Travis CI" &&
   git config user.email "noreply@travis-ci.org" &&
@@ -24,10 +25,12 @@ after_success: |
   git checkout config.toml &&
   git checkout gh-pages && rm -rf dev && mv public dev &&
   git add --all dev &&
-  git commit -a -m "rebuild pages" &&
+  git commit -a -m "rebuild pages"
+
   git checkout release &&
   gutenberg build --base-url https://t-rex.tileserver.ch &&
   git checkout gh-pages && cp -r public/* . &&
   git add --all . &&
   git commit -a -m "rebuild pages"
+
   git push -q upstream HEAD:gh-pages
