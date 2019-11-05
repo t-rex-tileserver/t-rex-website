@@ -236,7 +236,7 @@
 <p><code>dbconn</code>: &lt;Rust-Postgres connection URL&gt;</p>
 <p>DB connection URL in the form &quot;<code>postgres://user:pass@host:port/database</code>&quot;.</p>
 <p><code>pass</code> may be omitted if not needed. <code>port</code> defaults to <code>5432</code> and <code>database</code> defaults to the value of <code>user</code> if not specified. The driver supports <code>trust</code>, <code>password</code>, and <code>md5</code> authentication. Unix domain sockets can be used as well. The <code>host</code> portion of the URI should be set to the absolute path to the directory containing the socket file.</p>
-<p>Special URI characters (even in the password!) have to be <a href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">percent encoded</a>. See Rust-Postgres <a href="https://github.com/sfackler/rust-postgres#connecting">connection</a> for more details.</p>
+<p>Special URI characters (even in the password!) have to be <a href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">percent encoded</a>. See Rust-Postgres <a href="https://github.com/sfackler/rust-postgres/tree/postgres-v0.15.2#connecting">connection</a> for more details.</p>
 <p><code>pool</code>: integer</p>
 <p>Connection pool size.</p>
 <p>Example:</p>
