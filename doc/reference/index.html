@@ -17,7 +17,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
   <script src="https://t-rex.tileserver.ch/semantic.min.js"></script>
   <script src="https://t-rex.tileserver.ch/site.js"></script>
@@ -236,7 +236,7 @@
 <p><code>dbconn</code>: &lt;Rust-Postgres connection URL&gt;</p>
 <p>DB connection URL in the form &quot;<code>postgres://user:pass@host:port/database</code>&quot;.</p>
 <p><code>pass</code> may be omitted if not needed. <code>port</code> defaults to <code>5432</code> and <code>database</code> defaults to the value of <code>user</code> if not specified. The driver supports <code>trust</code>, <code>password</code>, and <code>md5</code> authentication. Unix domain sockets can be used as well. The <code>host</code> portion of the URI should be set to the absolute path to the directory containing the socket file.</p>
-<p>Special URI characters (even in the password!) have to be <a href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">percent encdoded</a>. See Rust-Postgres <a href="https://github.com/sfackler/rust-postgres#connecting">connection</a> for more details.</p>
+<p>Special URI characters (even in the password!) have to be <a href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">percent encoded</a>. See Rust-Postgres <a href="https://github.com/sfackler/rust-postgres/tree/postgres-v0.15.2#connecting">connection</a> for more details.</p>
 <p><code>pool</code>: integer</p>
 <p>Connection pool size.</p>
 <p>Example:</p>
@@ -262,7 +262,7 @@
 </span></pre><h3 id="user">user</h3>
 <p>Custom grid definition.</p>
 <p><code>width</code>: integer</p>
-<p>With of an individual tile in pixels.</p>
+<p>Width of an individual tile in pixels.</p>
 <p><code>height</code>: integer</p>
 <p>Height of an individual tile in pixels.</p>
 <p><code>extent</code>: { minx: float, miny: float, maxx: float, maxy: float }</p>
@@ -416,7 +416,7 @@ Supported for PostGIS layer only.</p>
 <p>Web server port number.</p>
 <p>Default: <code>6767</code></p>
 <p><code>threads</code>: integer</p>
-<p>Number of parallel web server threads. Defaults to number of available logical CPU's.</p>
+<p>Number of parallel web server threads. Defaults to number of available logical CPUs.</p>
 <p><code>cache_control_max_age</code>: integer</p>
 <p>Cache-Control headers set by web server.</p>
 <p>Example:</p>
