@@ -352,7 +352,7 @@ If unset, maxzoom is deduced from query maxzoom limits.</p>
 <p>Simplify geometry (lines and polygons). Can be overridden in a layer's query configuration.</p>
 <p>Supported for PostGIS layer only.</p>
 <p><code>tolerance</code>: string</p>
-<p>Simplification tolerance (Default: !pixel_width!/2)</p>
+<p>Simplification tolerance (Default: !pixel_width!/2). Can be overridden in a layer's query configuration.</p>
 <p>Supported for PostGIS layer only.</p>
 <p><code>buffer_size</code>: integer</p>
 <p>Tile buffer size in pixels.<br />
@@ -380,6 +380,9 @@ Supported for PostGIS layer only.</p>
 <p>Maximal zoom level for using this query.</p>
 <p><code>simplify</code>: true | false</p>
 <p>Simplify geometry (lines and polygons). Overrides layer simplification, if set.</p>
+<p>Supported for PostGIS layer only.</p>
+<p><code>tolerance</code>: string</p>
+<p>Simplification tolerance. Overrides layer simplification, if set.</p>
 <p>Supported for PostGIS layer only.</p>
 <p><code>sql</code>: string</p>
 <p>Explicit SQL query.</p>
