@@ -236,13 +236,13 @@ Width and height of the tile (Default: 4096. Grid default size is 256)
 
 `simplify`: true | false
 
-Simplify geometry (lines and polygons).
+Simplify geometry (lines and polygons). Can be overridden in a layer's query configuration.
 
 Supported for PostGIS layer only.
 
 `tolerance`: string
 
-Simplification tolerance (Default: !pixel_width!/2)
+Simplification tolerance (Default: !pixel_width!/2). Can be overridden in a layer's query configuration.
 
 Supported for PostGIS layer only.
 
@@ -282,6 +282,19 @@ Minimal zoom level for using this query.
 `maxzoom`: integer
 
 Maximal zoom level for using this query.
+
+`simplify`: true | false
+
+Simplify geometry (lines and polygons). Overrides layer simplification, if set.
+
+Supported for PostGIS layer only.
+
+`tolerance`: string
+
+Simplification tolerance. Overrides layer simplification, if set.
+
+Supported for PostGIS layer only.
+
 
 `sql`: string
   
