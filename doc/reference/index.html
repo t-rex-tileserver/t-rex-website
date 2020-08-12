@@ -349,10 +349,10 @@ If unset, maxzoom is deduced from query maxzoom limits.</p>
 <p><code>tile_size</code>: integer</p>
 <p>Width and height of the tile (Default: 4096. Grid default size is 256)</p>
 <p><code>simplify</code>: true | false</p>
-<p>Simplify geometry (lines and polygons).</p>
+<p>Simplify geometry (lines and polygons). Can be overridden in a layer's query configuration.</p>
 <p>Supported for PostGIS layer only.</p>
 <p><code>tolerance</code>: string</p>
-<p>Simplification tolerance (Default: !pixel_width!/2)</p>
+<p>Simplification tolerance (Default: !pixel_width!/2). Can be overridden in a layer's query configuration.</p>
 <p>Supported for PostGIS layer only.</p>
 <p><code>buffer_size</code>: integer</p>
 <p>Tile buffer size in pixels.<br />
@@ -378,6 +378,12 @@ Supported for PostGIS layer only.</p>
 <p>Minimal zoom level for using this query.</p>
 <p><code>maxzoom</code>: integer</p>
 <p>Maximal zoom level for using this query.</p>
+<p><code>simplify</code>: true | false</p>
+<p>Simplify geometry (lines and polygons). Overrides layer simplification, if set.</p>
+<p>Supported for PostGIS layer only.</p>
+<p><code>tolerance</code>: string</p>
+<p>Simplification tolerance. Overrides layer simplification, if set.</p>
+<p>Supported for PostGIS layer only.</p>
 <p><code>sql</code>: string</p>
 <p>Explicit SQL query.</p>
 <p>The following variables are replaced at runtime:</p>
@@ -472,7 +478,7 @@ Supported for PostGIS layer only.</p>
         <div class="seven wide column">
           <h4 class="ui inverted header">t-rex</h4>
           <div class="ui inverted link list">
-            <p class="item">Copyright &copy; 2016-2019 by Pirmin Kalberer</p>
+            <p class="item">Copyright &copy; 2016-2020 by Pirmin Kalberer</p>
           </div>
         </div>
       </div>
