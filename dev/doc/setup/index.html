@@ -220,23 +220,29 @@
     <h1 id="setup">Setup</h1>
 <h2 id="installation">Installation</h2>
 <div class="vtab">
-<h3 id="ubuntu">Ubuntu</h3>
-<p>t-rex requires <code>libgdal20</code>. For Xenial or older you can add UbuntuGIS PPA <a href="https://launchpad.net/%7Eubuntugis/+archive/ubuntu/ppa">Stable</a> or <a href="https://launchpad.net/%7Eubuntugis/+archive/ubuntu/ubuntugis-unstable">Unstable</a>.</p>
-<p>Install GDAL 2.x library:</p>
+<h3 id="ubuntu-focal">Ubuntu Focal</h3>
+<p>Install GDAL library:</p>
 <pre style="background-color:#272822">
-<span style="background-color:#272822;color:#f8f8f2;">sudo apt-get install libgdal20
+<span style="background-color:#272822;color:#f8f8f2;">sudo apt install libgdal26
 </span></pre>
 <p>Download and install DEB package from <a href="https://github.com/t-rex-tileserver/t-rex/releases/latest">github.com</a>:</p>
 <pre style="background-color:#272822">
-<span style="background-color:#272822;color:#f8f8f2;">curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.11.0/t-rex-v0.11.0-x86_64-unknown-linux-gnu.deb &amp;&amp; sudo dpkg -i t-rex-v0.11.0-x86_64-unknown-linux-gnu.deb
+<span style="background-color:#272822;color:#f8f8f2;">curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.12.0/t-rex_0.12.0_amd64.deb &amp;&amp; sudo dpkg -i t-rex_0.12.0_amd64.deb
+</span></pre></div><div class="vtab">
+<h3 id="linux">Linux</h3>
+<p>Download Binary with minimal dependencies from <a href="https://github.com/t-rex-tileserver/t-rex/releases/latest">github.com</a>:</p>
+<pre style="background-color:#272822">
+<span style="background-color:#272822;color:#f8f8f2;">curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.12.0/t-rex-v0.12.0-x86_64-linux-gnu.tar.gz &amp;&amp; sudo tar xf t-rex-v0.12.0-x86_64-linux-gnu.tar.gz -C /usr/local/bin
 </span></pre></div><div class="vtab">
 <h3 id="windows">Windows</h3>
 <p>Download MSI installer from <a href="https://github.com/t-rex-tileserver/t-rex/releases/latest">github.com</a>:</p>
-<p><a href="https://github.com/t-rex-tileserver/t-rex/releases/download/v0.11.0/t-rex-v0.11.0.msi">t-rex-v0.11.0.msi</a></p>
+<p><a href="https://github.com/t-rex-tileserver/t-rex/releases/download/v0.12.0/t-rex-v0.12.0.msi">t-rex-v0.12.0.msi</a></p>
 <p>Double click to install (needs Administrator permissions).</p>
 <p>Run in Command Prompt window:</p>
 <pre style="background-color:#272822">
-<span style="background-color:#272822;color:#f8f8f2;">&quot;%programfiles%\t-rex\t_rex&quot;
+<span style="background-color:#272822;color:#f8f8f2;">set GDAL_DATA=%programfiles%\t-rex\gdal-data
+</span><span style="background-color:#272822;color:#f8f8f2;">
+</span><span style="background-color:#272822;color:#f8f8f2;">&quot;%programfiles%\t-rex\t_rex&quot;
 </span></pre></div><div class="vtab">
 <h3 id="docker">Docker</h3>
 <p>Install <a href="https://www.docker.com/community-edition#/download">Docker</a> on your platform.</p>
