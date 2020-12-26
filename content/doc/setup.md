@@ -11,19 +11,27 @@ Installation
 
 <div class="vtab">
 
-### Ubuntu
+### Ubuntu Focal
 
-t-rex requires `libgdal20`. For Xenial or older you can add UbuntuGIS PPA [Stable](https://launchpad.net/~ubuntugis/+archive/ubuntu/ppa) or [Unstable](https://launchpad.net/~ubuntugis/+archive/ubuntu/ubuntugis-unstable).
-
-Install GDAL 2.x library:
+Install GDAL library:
 ```
-sudo apt-get install libgdal20
+sudo apt install libgdal26
 ```
 
 Download and install DEB package from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
 
 ```
-curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.12.0/t-rex-v0.12.0-x86_64-unknown-linux-gnu.deb && sudo dpkg -i t-rex-v0.12.0-x86_64-unknown-linux-gnu.deb
+curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.12.0/t-rex_0.12.0_amd64.deb && sudo dpkg -i t-rex_0.12.0_amd64.deb
+```
+
+</div><div class="vtab">
+
+### Linux
+
+Download Binary with minimal dependencies from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
+
+```
+curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.12.0/t-rex-v0.12.0-x86_64-linux-gnu.tar.gz && sudo tar xf t-rex-v0.12.0-x86_64-linux-gnu.tar.gz -C /usr/local/bin
 ```
 
 </div><div class="vtab">
@@ -39,6 +47,8 @@ Double click to install (needs Administrator permissions).
 Run in Command Prompt window:
 
 ```
+set GDAL_DATA=%programfiles%\t-rex\gdal-data
+
 "%programfiles%\t-rex\t_rex"
 ```
 
