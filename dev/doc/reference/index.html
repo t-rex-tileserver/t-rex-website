@@ -403,6 +403,7 @@ Supported for PostGIS layer only.</p>
 </span><span style="background-color:#272822;color:#e6db74;">  </span><span style="background-color:#272822;color:#e6db74;">FROM osm_buildings
 </span><span style="background-color:#272822;color:#e6db74;">  </span><span style="background-color:#272822;color:#e6db74;">WHERE geometry &amp;&amp; !bbox!&quot;&quot;&quot;
 </span></pre><h2 id="cache">cache</h2>
+<p>Either tile cache is stored in local filesystem (<a href="https://t-rex.tileserver.ch/dev/doc/reference/#file">file</a>) or in S3 object storage (<a href="https://t-rex.tileserver.ch/dev/doc/reference/#s3">S3</a>).</p>
 <h3 id="file">file</h3>
 <p>File system based tile cache.</p>
 <p>Directory layout: <code>&lt;base path&gt;/&lt;tileset name&gt;/&lt;z&gt;/&lt;x&gt;/&lt;y&gt;.pbf</code></p>
@@ -414,6 +415,32 @@ Supported for PostGIS layer only.</p>
 <pre style="background-color:#272822">
 <span style="background-color:#272822;color:#f8f8f2;">[</span><span style="background-color:#272822;color:#a6e22e;">cache.file</span><span style="background-color:#272822;color:#f8f8f2;">]
 </span><span style="background-color:#272822;color:#f92672;">base </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;/var/cache/mvtcache&quot;
+</span></pre><h3 id="s3">S3</h3>
+<p>S3 object storage based tile cache.</p>
+<p>Directory layout: <code>&lt;endpoint&gt;/&lt;bucket&gt;/&lt;key_prefix&gt;/&lt;tileset name&gt;/&lt;z&gt;/&lt;x&gt;/&lt;y&gt;.pbf</code></p>
+<p><code>endpoint</code>: string</p>
+<p>S3 service endpoint for storing tiles.</p>
+<p><code>bucket</code>: string</p>
+<p>S3 bucket.</p>
+<p><code>access_key</code>: string</p>
+<p>Access key for S3.</p>
+<p><code>secret_key</code>: string</p>
+<p>Secret key for S3.</p>
+<p><code>region</code>: string</p>
+<p>S3 region.</p>
+<p><code>key_prefix</code>: string</p>
+<p>Key prefix for storing files, optional. If omitted tileset is stored in bucket root.</p>
+<p><code>baseurl</code>: string</p>
+<p>Base URL of tile cache server published in metadata.</p>
+<p>Example:</p>
+<pre style="background-color:#272822">
+<span style="background-color:#272822;color:#f8f8f2;">[</span><span style="background-color:#272822;color:#a6e22e;">cache.s3</span><span style="background-color:#272822;color:#f8f8f2;">]
+</span><span style="background-color:#272822;color:#f92672;">endpoint </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;http://localhost:9000&quot;
+</span><span style="background-color:#272822;color:#f92672;">bucket </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;trex&quot;
+</span><span style="background-color:#272822;color:#f92672;">access_key </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;my-access-key&quot;
+</span><span style="background-color:#272822;color:#f92672;">secret_key </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;my-secret-key&quot;
+</span><span style="background-color:#272822;color:#f92672;">region </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;my-region&quot;
+</span><span style="background-color:#272822;color:#f92672;">key_prefix </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;my-prefix&quot;
 </span></pre><h2 id="webserver">webserver</h2>
 <p><code>bind</code>: &quot;&lt;IP adress&gt;&quot;</p>
 <p>IP address of interface to bind web server (<code>0.0.0.0</code> for all).</p>
