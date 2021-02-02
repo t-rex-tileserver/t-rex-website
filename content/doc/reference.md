@@ -375,7 +375,11 @@ Key prefix for storing files, optional. If omitted tileset is stored in bucket r
 
 `baseurl`: string
 
-Base URL of tile cache server published in metadata.
+Base URL of tile cache server published in metadata, optional. If not set defaults to `http://localhost:6767`. See configuration example below for how to configure for publication of tile cache directly from a [Minio S3](https://min.io/download). The `key_prefix` part is optional, depending if this option is set.
+
+`gzip_header_enabled`: bool
+
+Enable HTTP header `Content-Encoding: gzip` on mvt files, optional, defaults to `true`. 
 
 Example:
 ```toml
@@ -386,6 +390,7 @@ access_key = "my-access-key"
 secret_key = "my-secret-key"
 region = "my-region"
 key_prefix = "my-prefix"
+baseurl = "https://localhost:9000/trex/my-prefix"
 ```
 
 webserver
