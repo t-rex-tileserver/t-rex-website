@@ -431,7 +431,9 @@ Supported for PostGIS layer only.</p>
 <p><code>key_prefix</code>: string</p>
 <p>Key prefix for storing files, optional. If omitted tileset is stored in bucket root.</p>
 <p><code>baseurl</code>: string</p>
-<p>Base URL of tile cache server published in metadata.</p>
+<p>Base URL of tile cache server published in metadata, optional. If not set defaults to <code>http://localhost:6767</code>. See configuration example below for how to configure for publication of tile cache directly from a <a href="https://min.io/download">Minio S3</a>. The <code>key_prefix</code> part is optional, depending if this option is set.</p>
+<p><code>gzip_header_enabled</code>: bool</p>
+<p>Enable HTTP header <code>Content-Encoding: gzip</code> on mvt files, optional, defaults to <code>true</code>.</p>
 <p>Example:</p>
 <pre style="background-color:#272822">
 <span style="background-color:#272822;color:#f8f8f2;">[</span><span style="background-color:#272822;color:#a6e22e;">cache.s3</span><span style="background-color:#272822;color:#f8f8f2;">]
@@ -441,6 +443,7 @@ Supported for PostGIS layer only.</p>
 </span><span style="background-color:#272822;color:#f92672;">secret_key </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;my-secret-key&quot;
 </span><span style="background-color:#272822;color:#f92672;">region </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;my-region&quot;
 </span><span style="background-color:#272822;color:#f92672;">key_prefix </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;my-prefix&quot;
+</span><span style="background-color:#272822;color:#f92672;">baseurl </span><span style="background-color:#272822;color:#f8f8f2;">= </span><span style="background-color:#272822;color:#e6db74;">&quot;https://localhost:9000/trex/my-prefix&quot;
 </span></pre><h2 id="webserver">webserver</h2>
 <p><code>bind</code>: &quot;&lt;IP adress&gt;&quot;</p>
 <p>IP address of interface to bind web server (<code>0.0.0.0</code> for all).</p>
