@@ -321,6 +321,8 @@ sql = """
 cache
 -----
 
+Either tile cache is stored in local filesystem ([file](#file)) or in S3 object storage ([S3](#s3)). 
+
 ### file
 
 File system based tile cache.
@@ -339,6 +341,56 @@ Example:
 ```toml
 [cache.file]
 base = "/var/cache/mvtcache"
+```
+
+### S3
+
+S3 object storage based tile cache.
+
+Directory layout: `<endpoint>/<bucket>/<key_prefix>/<tileset name>/<z>/<x>/<y>.pbf`
+
+`endpoint`: string
+
+S3 service endpoint for storing tiles.
+
+`bucket`: string
+
+S3 bucket.
+
+`access_key`: string
+
+Access key for S3. 
+
+`secret_key`: string
+
+Secret key for S3.
+
+`region`: string
+
+S3 region.
+
+`key_prefix`: string
+
+Key prefix for storing files, optional. If omitted tileset is stored in bucket root.
+
+`baseurl`: string
+
+Base URL of tile cache server published in metadata, optional. If not set defaults to `http://localhost:6767`. See configuration example below for how to configure for publication of tile cache directly from a [Minio S3](https://min.io/download). The `key_prefix` part is optional, depending if this option is set.
+
+`gzip_header_enabled`: bool
+
+Enable HTTP header `Content-Encoding: gzip` on mvt files, optional, defaults to `true`. 
+
+Example:
+```toml
+[cache.s3]
+endpoint = "http://localhost:9000"
+bucket = "trex"
+access_key = "my-access-key"
+secret_key = "my-secret-key"
+region = "my-region"
+key_prefix = "my-prefix"
+baseurl = "https://localhost:9000/trex/my-prefix"
 ```
 
 webserver
