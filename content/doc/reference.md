@@ -48,6 +48,10 @@ Special URI characters (even in the password!) have to be [percent encoded](http
 
 Connection pool size.
 
+`connection_timeout`: integer
+
+Connection timeout in milliseconds (Default: 30000 / 30s).
+
 Example:
 ```toml
 [[datasource]]
@@ -144,7 +148,7 @@ Extent covered by tileset.
 
 `minzoom`: integer
 
-Minimum zoom level for which tiles are available (Default: 0).  
+Minimum zoom level for which tiles are available (Default: 0).
 If unset, minzoom is deduced from layer and query minzoom limits.
 
 `maxzoom`: integer
