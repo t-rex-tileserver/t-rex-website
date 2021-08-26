@@ -28,7 +28,7 @@ curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.13.0/t
 
 ### Linux
 
-Download Binary with minimal dependencies from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
+Download Binary with minimal dependencies (no GDAL driver) from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
 
 ```
 curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.13.0/t-rex-v0.13.0-x86_64-linux-gnu.tar.gz && sudo tar xf t-rex-v0.13.0-x86_64-linux-gnu.tar.gz -C /usr/local/bin
