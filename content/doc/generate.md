@@ -77,3 +77,20 @@ OPTIONS:
 Example:
 
     t_rex drilldown --config mvtbench.toml --points 8.528674,47.370217,9.437237,47.050807 >stats.csv
+
+
+Columns:
+- `count`: Number of measurements
+- `min`: Minimal measured value
+- `max`: Maximal measured value
+- `mean`: Mean value of measurements
+- `stddev`: Standard deviation of measurements
+- `key0`: metric name
+- `key1`: tileset
+- `key2`: layer
+- `key3`: zoom
+
+Measurements:
+- `tile_ms`: Tile creation time in milliseconds
+- `feature_count`: Number of features in tile
+- `tile_bytes`: Size of tile in bytes (uncompressed)
