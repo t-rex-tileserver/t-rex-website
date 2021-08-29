@@ -9,7 +9,9 @@ Serving vector tiles
 Usage
 -----
 
-    t_rex serve --dbconn postgresql://user:pass@localhost/dbname
+```
+t_rex serve --dbconn postgresql://user:pass@localhost/dbname
+```
 
 Tiles are then served at `http://localhost:6767/{layer}/{z}/{x}/{y}.pbf`
 
@@ -17,19 +19,25 @@ A list of all detected layers is available at [http://localhost:6767/](http://lo
 
 GDAL examples:
 
-    t_rex serve --datasource natural_earth.gpkg
-    t_rex serve --datasource ne_110m_coastline.shp
-    t_rex serve --datasource liechtenstein-latest.osm.pbf
-    t_rex serve --datasource route.gpx
-    t_rex serve --datasource spreadsheet.vrt
+```
+t_rex serve --datasource natural_earth.gpkg
+t_rex serve --datasource ne_110m_coastline.shp
+t_rex serve --datasource liechtenstein-latest.osm.pbf
+t_rex serve --datasource route.gpx
+t_rex serve --datasource spreadsheet.vrt
+```
 
 Use a tile cache:
 
-    t_rex serve --dbconn postgresql://user:pass@localhost/dbname --cache /tmp/mvtcache
+```
+t_rex serve --dbconn postgresql://user:pass@localhost/dbname --cache /tmp/mvtcache
+```
 
 Run server with configuration file:
 
-    t_rex serve --config config.toml
+```
+t_rex serve --config config.toml
+```
 
 
 Server options

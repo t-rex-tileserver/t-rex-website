@@ -1,4 +1,3 @@
-{% block setmenu %}{% set curmenu = "doc" %}{% endblock setmenu %}
 {% import "macros.html" as macros %}
 <!DOCTYPE html>
 <html>
@@ -38,14 +37,14 @@
 <div class="ui large top fixed hidden red inverted menu">
   <div class="ui container">
     <div class="right menu">
-      {{ macros::menu_entries(selected=curmenu) }}
+      {{ macros::menu_entries() }}
     </div>
   </div>
 </div>
 
 {# Sidebar Menu #}
 <div class="ui vertical red inverted sidebar menu">
-  {{ macros::menu_entries(selected=curmenu) }}
+  {{ macros::menu_entries() }}
 </div>
 
 {# Page Contents #}
@@ -58,7 +57,7 @@
           <i class="sidebar icon"></i>
         </a>
         <div class="right item">
-          {{ macros::menu_entries(selected=curmenu) }}
+          {{ macros::menu_entries() }}
         </div>
       </div>
     </div>
