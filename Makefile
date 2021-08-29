@@ -1,11 +1,7 @@
-ZOLA_VERSION = 0.13.0
+ZOLA_VERSION = 0.14.1
 
 serve:
 	zola serve
-
-gh-pages:
-	zola build
-	git checkout gh-pages && cp -r public/* .
 
 theme:
 	cd semantic && ../node_modules/.bin/gulp build
@@ -17,4 +13,4 @@ bump:
 
 install:
 	wget -q -O - "https://github.com/getzola/zola/releases/download/v$(ZOLA_VERSION)/zola-v$(ZOLA_VERSION)-x86_64-unknown-linux-gnu.tar.gz" | tar xzf - -C $$HOME/bin
-	which zole; zole --version
+	which zola; zola --version
