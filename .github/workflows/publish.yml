@@ -30,4 +30,4 @@ jobs:
           git add --all .
           git commit -a -m "rebuild pages"
 
-          git push HEAD:gh-pages
+          git push origin HEAD:gh-pages
