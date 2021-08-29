@@ -37,7 +37,9 @@ Usage
 
 Generate tiles for cache:
 
-    t_rex generate --config config.toml
+```
+t_rex generate --config config.toml
+```
 
 
 ### MBTiles creation
@@ -46,7 +48,9 @@ To create MBTiles files with vector tiles from a local cache you can use [MBUtil
 
 Example:
 
-    mb-util --image_format=pbf /tmp/mvtcache/streets streets.mbtiles
+```
+mb-util --image_format=pbf /tmp/mvtcache/streets streets.mbtiles
+```
 
 
 Drilldown
@@ -76,4 +80,23 @@ OPTIONS:
 
 Example:
 
-    t_rex drilldown --config mvtbench.toml --points 8.528674,47.370217,9.437237,47.050807 >stats.csv
+```
+t_rex drilldown --config mvtbench.toml --points 8.528674,47.370217,9.437237,47.050807 >stats.csv
+```
+
+
+Columns:
+- `count`: Number of measurements
+- `min`: Minimal measured value
+- `max`: Maximal measured value
+- `mean`: Mean value of measurements
+- `stddev`: Standard deviation of measurements
+- `key0`: metric name
+- `key1`: tileset
+- `key2`: layer
+- `key3`: zoom
+
+Measurements:
+- `tile_ms`: Tile creation time in milliseconds
+- `feature_count`: Number of features in tile
+- `tile_bytes`: Size of tile in bytes (uncompressed)

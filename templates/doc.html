@@ -5,7 +5,7 @@
 {% block content %}
 <div id="contentgrid" class="ui grid">
   <div id="toc" class="three wide large screen only teal inverted column">
-    {{ macros::toc(selected=0) }}
+    {{ macros::toc() }}
   </div>
   <div class="thirteen wide olive inverted column">
     {{ section.content | safe }}

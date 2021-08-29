@@ -21,17 +21,17 @@ sudo apt install libgdal26
 Download and install DEB package from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
 
 ```
-curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.13.0/t-rex_0.13.0_amd64.deb && sudo dpkg -i t-rex_0.13.0_amd64.deb
+curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.0/t-rex_0.14.0_amd64.deb && sudo dpkg -i t-rex_0.14.0_amd64.deb
 ```
 
 </div><div class="vtab">
 
 ### Linux
 
-Download Binary with minimal dependencies from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
+Download Binary with minimal dependencies (no GDAL driver) from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
 
 ```
-curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.13.0/t-rex-v0.13.0-x86_64-linux-gnu.tar.gz && sudo tar xf t-rex-v0.13.0-x86_64-linux-gnu.tar.gz -C /usr/local/bin
+curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.0/t-rex-v0.14.0-x86_64-linux-gnu.tar.gz && sudo tar xf t-rex-v0.14.0-x86_64-linux-gnu.tar.gz -C /usr/local/bin
 ```
 
 </div><div class="vtab">

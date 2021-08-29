@@ -1,5 +1,6 @@
 title = "t-rex"
 base_url = "https://t-rex.tileserver.ch"
-generate_tags_pages = false
+
+[markdown]
 highlight_code = true
 highlight_theme = "monokai"
