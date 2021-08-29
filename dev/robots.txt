@@ -1,1 +1,3 @@
 User-agent: *
+Allow: /
+Sitemap: https://t-rex.tileserver.ch/dev/sitemap.xml
