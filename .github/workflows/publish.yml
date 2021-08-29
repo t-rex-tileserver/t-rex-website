@@ -1,0 +1,33 @@
+on: push
+name: Build and deploy GH Pages
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install zola
+        run: wget -q -O - "https://github.com/getzola/zola/releases/download/v0.14.0/zola-v0.14.0-x86_64-unknown-linux-gnu.tar.gz" | sudo tar xzf - -C /usr/local/bin
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: build and deploy
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "github-actions-bot@users.noreply.github.com"
+
+          # Build master branch
+          git checkout master
+          sed -i 's/title = "t-rex"/title = "t-rex (dev)"/g' config.toml
+          zola build --base-url https://t-rex.tileserver.ch/dev
+          git checkout config.toml
+          git checkout gh-pages && rm -rf dev && mv public dev
+          git add --all dev
+          git commit -a -m "rebuild pages"
+
+          # Build release branch
+          git checkout release
+          zola build --base-url https://t-rex.tileserver.ch
+          git checkout gh-pages && cp -r public/* .
+          git add --all .
+          git commit -a -m "rebuild pages"
+
+          git push HEAD:gh-pages
