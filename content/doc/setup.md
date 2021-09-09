@@ -40,14 +40,14 @@ curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.0/t
 
 Download MSI installer from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
 
-[t-rex-v0.13.0.msi](https://github.com/t-rex-tileserver/t-rex/releases/download/v0.13.0/t-rex-v0.13.0.msi)
+[t-rex-v0.14.0.msi](https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.0/t-rex-v0.14.0.msi)
 
 Double click to install (needs Administrator permissions).
 
 Run in Command Prompt window:
 
 ```
-set GDAL_DATA=%programfiles%\t-rex\gdal-data
+set PROJ_LIB=%programfiles%\t-rex\proj7\share
 
 "%programfiles%\t-rex\t_rex"
 ```
