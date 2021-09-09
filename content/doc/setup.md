@@ -69,11 +69,11 @@ The process is running as user `www-data` with the working directory `/var/data/
 
 Example using input and output volumes (Unix):
 
-`docker run -p 6767:6767 -v $PWD:/var/data/in:ro -v /tmp:/var/data/out sourcepole/t-rex serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml`
+`docker run -p 6767:6767 -v $PWD:/var/data/in:ro -v /tmp:/var/data/out sourcepole/t-rex:0.14.0 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml`
 
 Current directory on Windows:
 
-`docker run -p 6767:6767 -v %CD%:/var/data/in:ro sourcepole/t-rex serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml`
+`docker run -p 6767:6767 -v %CD%:/var/data/in:ro sourcepole/t-rex:0.14.0 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml`
 
 </div>
 
