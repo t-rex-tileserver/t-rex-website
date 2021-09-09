@@ -60,9 +60,9 @@ Install [Docker](https://www.docker.com/community-edition#/download) on your pla
 
 Download and run the t-rex Docker image:
 ```
-docker pull sourcepole/t-rex
-docker run sourcepole/t-rex --version
-docker run -p 6767:6767 sourcepole/t-rex serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml
+docker pull sourcepole/t-rex:0.14.0
+docker run sourcepole/t-rex:0.14.0 --version
+docker run -p 6767:6767 sourcepole/t-rex:0.14.0 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml
 ```
 
 The process is running as user `www-data` with the working directory `/var/data/in`. For output, a volume `/var/data/out` is available.
