@@ -244,9 +244,9 @@
 <h3 id="docker">Docker</h3>
 <p>Install <a href="https://www.docker.com/community-edition#/download">Docker</a> on your platform.</p>
 <p>Download and run the t-rex Docker image:</p>
-<pre style="background-color:#272822;color:#f8f8f2;"><code><span>docker pull sourcepole/t-rex
-</span><span>docker run sourcepole/t-rex --version
-</span><span>docker run -p 6767:6767 sourcepole/t-rex serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml
+<pre style="background-color:#272822;color:#f8f8f2;"><code><span>docker pull sourcepole/t-rex:0.14.0
+</span><span>docker run sourcepole/t-rex:0.14.0 --version
+</span><span>docker run -p 6767:6767 sourcepole/t-rex:0.14.0 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml
 </span></code></pre>
 <p>The process is running as user <code>www-data</code> with the working directory <code>/var/data/in</code>. For output, a volume <code>/var/data/out</code> is available.</p>
 <p>Example using input and output volumes (Unix):</p>
