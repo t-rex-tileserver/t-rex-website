@@ -21,7 +21,32 @@ sudo apt install libgdal26
 Download and install DEB package from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
 
 ```
-curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.0/t-rex_0.14.0_amd64.deb && sudo dpkg -i t-rex_0.14.0_amd64.deb
+curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.1-pre6/t-rex_0.14.1.pre6-1.focal_amd64.deb && sudo dpkg -i t-rex_0.14.1.pre6-1.focal_amd64.deb
+```
+
+</div><div class="vtab">
+
+### Debian Bullseye
+
+Install GDAL library:
+```
+sudo apt install libgdal28
+```
+
+Download and install DEB package from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
+
+```
+curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.1-pre6/t-rex_0.14.1.pre6-1.bullseye_amd64.deb && sudo dpkg -i t-rex_0.14.1.pre6-1.bullseye_amd64.deb
+```
+
+</div><div class="vtab">
+
+### CentOS / RHEL 8
+
+Download and install DEB package from [github.com](https://github.com/t-rex-tileserver/t-rex/releases/latest):
+
+```
+curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.1-pre6/t-rex-0.14.1-0.pre6.el8.x86_64.rpm && sudo rpm -i t-rex-0.14.1-0.pre6.el8.x86_64.rpm
 ```
 
 </div><div class="vtab">
