@@ -223,7 +223,7 @@
 <pre style="background-color:#272822;color:#f8f8f2;"><code><span>sudo apt install libgdal26
 </span></code></pre>
 <p>Download and install DEB package from <a href="https://github.com/t-rex-tileserver/t-rex/releases/latest">github.com</a>:</p>
-<pre style="background-color:#272822;color:#f8f8f2;"><code><span>curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.1-pre6/t-rex_0.14.1.pre6-1.focal_amd64.deb &amp;&amp; sudo dpkg -i t-rex_0.14.1.pre6-1.focal_amd64.deb
+<pre style="background-color:#272822;color:#f8f8f2;"><code><span>curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.1/t-rex_0.14.1-1.focal_amd64.deb &amp;&amp; sudo dpkg -i t-rex_0.14.1-1.focal_amd64.deb
 </span></code></pre>
 </div><div class="vtab">
 <h3 id="debian-bullseye">Debian Bullseye</h3>
@@ -231,22 +231,27 @@
 <pre style="background-color:#272822;color:#f8f8f2;"><code><span>sudo apt install libgdal28
 </span></code></pre>
 <p>Download and install DEB package from <a href="https://github.com/t-rex-tileserver/t-rex/releases/latest">github.com</a>:</p>
-<pre style="background-color:#272822;color:#f8f8f2;"><code><span>curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.1-pre6/t-rex_0.14.1.pre6-1.bullseye_amd64.deb &amp;&amp; sudo dpkg -i t-rex_0.14.1.pre6-1.bullseye_amd64.deb
+<pre style="background-color:#272822;color:#f8f8f2;"><code><span>curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.1/t-rex_0.14.1-1.bullseye_amd64.deb &amp;&amp; sudo dpkg -i t-rex_0.14.1-1.bullseye_amd64.deb
 </span></code></pre>
 </div><div class="vtab">
 <h3 id="centos-rhel-8">CentOS / RHEL 8</h3>
-<p>Download and install DEB package from <a href="https://github.com/t-rex-tileserver/t-rex/releases/latest">github.com</a>:</p>
-<pre style="background-color:#272822;color:#f8f8f2;"><code><span>curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.1-pre6/t-rex-0.14.1-0.pre6.el8.x86_64.rpm &amp;&amp; sudo rpm -i t-rex-0.14.1-0.pre6.el8.x86_64.rpm
+<p>Download and install RPM package (without GDAL driver) from <a href="https://github.com/t-rex-tileserver/t-rex/releases/latest">github.com</a>:</p>
+<pre style="background-color:#272822;color:#f8f8f2;"><code><span>curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.1/t-rex-0.14.1-1.el8.x86_64.rpm &amp;&amp; sudo yum install t-rex-0.14.1-0.el8.x86_64.rpm
 </span></code></pre>
+<!--    
+yum install epel-release -y
+curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.1-pre9/t-rex-0.14.1-0.pre9.el8.x86_64.rpm &&
+yum install --enablerepo=powertools t-rex-0.14.1-0.pre9.el8.x86_64.rpm
+ -->
 </div><div class="vtab">
 <h3 id="linux">Linux</h3>
 <p>Download Binary with minimal dependencies (no GDAL driver) from <a href="https://github.com/t-rex-tileserver/t-rex/releases/latest">github.com</a>:</p>
-<pre style="background-color:#272822;color:#f8f8f2;"><code><span>curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.0/t-rex-v0.14.0-x86_64-linux-gnu.tar.gz &amp;&amp; sudo tar xf t-rex-v0.14.0-x86_64-linux-gnu.tar.gz -C /usr/local/bin
+<pre style="background-color:#272822;color:#f8f8f2;"><code><span>curl -O -L https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.1/t-rex-v0.14.1-x86_64-linux-gnu.tar.gz &amp;&amp; sudo tar xf t-rex-v0.14.1-x86_64-linux-gnu.tar.gz -C /usr/local/bin
 </span></code></pre>
 </div><div class="vtab">
 <h3 id="windows">Windows</h3>
 <p>Download MSI installer from <a href="https://github.com/t-rex-tileserver/t-rex/releases/latest">github.com</a>:</p>
-<p><a href="https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.0/t-rex-v0.14.0.msi">t-rex-v0.14.0.msi</a></p>
+<p><a href="https://github.com/t-rex-tileserver/t-rex/releases/download/v0.14.1/t-rex-v0.14.1.msi">t-rex-v0.14.1.msi</a></p>
 <p>Double click to install (needs Administrator permissions).</p>
 <p>Run in Command Prompt window:</p>
 <pre style="background-color:#272822;color:#f8f8f2;"><code><span>set PROJ_LIB=%programfiles%\t-rex\proj7\share
@@ -257,15 +262,15 @@
 <h3 id="docker">Docker</h3>
 <p>Install <a href="https://www.docker.com/community-edition#/download">Docker</a> on your platform.</p>
 <p>Download and run the t-rex Docker image:</p>
-<pre style="background-color:#272822;color:#f8f8f2;"><code><span>docker pull sourcepole/t-rex:0.14.0
-</span><span>docker run sourcepole/t-rex:0.14.0 --version
-</span><span>docker run -p 6767:6767 sourcepole/t-rex:0.14.0 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml
+<pre style="background-color:#272822;color:#f8f8f2;"><code><span>docker pull sourcepole/t-rex:0.14.1
+</span><span>docker run sourcepole/t-rex:0.14.1 --version
+</span><span>docker run -p 6767:6767 sourcepole/t-rex:0.14.1 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml
 </span></code></pre>
 <p>The process is running as user <code>www-data</code> with the working directory <code>/var/data/in</code>. For output, a volume <code>/var/data/out</code> is available.</p>
 <p>Example using input and output volumes (Unix):</p>
-<p><code>docker run -p 6767:6767 -v $PWD:/var/data/in:ro -v /tmp:/var/data/out sourcepole/t-rex:0.14.0 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml</code></p>
+<p><code>docker run -p 6767:6767 -v $PWD:/var/data/in:ro -v /tmp:/var/data/out sourcepole/t-rex:0.14.1 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml</code></p>
 <p>Current directory on Windows:</p>
-<p><code>docker run -p 6767:6767 -v %CD%:/var/data/in:ro sourcepole/t-rex:0.14.0 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml</code></p>
+<p><code>docker run -p 6767:6767 -v %CD%:/var/data/in:ro sourcepole/t-rex:0.14.1 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml</code></p>
 </div>
 <h2 id="upgrading">Upgrading</h2>
 <p>See the <a href="https://github.com/t-rex-tileserver/t-rex/blob/master/CHANGELOG.md">Changelog</a> for breaking changes in new versions.</p>
