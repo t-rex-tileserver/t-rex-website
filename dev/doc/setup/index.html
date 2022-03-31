@@ -262,15 +262,15 @@ yum install --enablerepo=powertools t-rex-0.14.3-1.el8.x86_64.rpm
 <h3 id="docker">Docker</h3>
 <p>Install <a href="https://www.docker.com/community-edition#/download">Docker</a> on your platform.</p>
 <p>Download and run the t-rex Docker image:</p>
-<pre style="background-color:#272822;color:#f8f8f2;"><code><span>docker pull sourcepole/t-rex:0.14.3
-</span><span>docker run sourcepole/t-rex:0.14.3 --version
-</span><span>docker run -p 6767:6767 sourcepole/t-rex:0.14.3 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml
+<pre style="background-color:#272822;color:#f8f8f2;"><code><span>docker pull sourcepole/t-rex:v0.14.3
+</span><span>docker run sourcepole/t-rex:v0.14.3 --version
+</span><span>docker run -p 6767:6767 sourcepole/t-rex:v0.14.3 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml
 </span></code></pre>
 <p>The process is running as user <code>www-data</code> with the working directory <code>/var/data/in</code>. For output, a volume <code>/var/data/out</code> is available.</p>
 <p>Example using input and output volumes (Unix):</p>
-<p><code>docker run -p 6767:6767 -v $PWD:/var/data/in:ro -v /tmp:/var/data/out sourcepole/t-rex:0.14.3 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml</code></p>
+<p><code>docker run -p 6767:6767 -v $PWD:/var/data/in:ro -v /tmp:/var/data/out sourcepole/t-rex:v0.14.3 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml</code></p>
 <p>Current directory on Windows:</p>
-<p><code>docker run -p 6767:6767 -v %CD%:/var/data/in:ro sourcepole/t-rex:0.14.3 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml</code></p>
+<p><code>docker run -p 6767:6767 -v %CD%:/var/data/in:ro sourcepole/t-rex:v0.14.3 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml</code></p>
 </div>
 <h2 id="upgrading">Upgrading</h2>
 <p>See the <a href="https://github.com/t-rex-tileserver/t-rex/blob/master/CHANGELOG.md">Changelog</a> for breaking changes in new versions.</p>
