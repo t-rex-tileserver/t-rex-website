@@ -91,20 +91,20 @@ Install [Docker](https://www.docker.com/community-edition#/download) on your pla
 
 Download and run the t-rex Docker image:
 ```
-docker pull sourcepole/t-rex:0.14.3
-docker run sourcepole/t-rex:0.14.3 --version
-docker run -p 6767:6767 sourcepole/t-rex:0.14.3 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml
+docker pull sourcepole/t-rex:v0.14.3
+docker run sourcepole/t-rex:v0.14.3 --version
+docker run -p 6767:6767 sourcepole/t-rex:v0.14.3 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml
 ```
 
 The process is running as user `www-data` with the working directory `/var/data/in`. For output, a volume `/var/data/out` is available.
 
 Example using input and output volumes (Unix):
 
-`docker run -p 6767:6767 -v $PWD:/var/data/in:ro -v /tmp:/var/data/out sourcepole/t-rex:0.14.3 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml`
+`docker run -p 6767:6767 -v $PWD:/var/data/in:ro -v /tmp:/var/data/out sourcepole/t-rex:v0.14.3 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml`
 
 Current directory on Windows:
 
-`docker run -p 6767:6767 -v %CD%:/var/data/in:ro sourcepole/t-rex:0.14.3 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml`
+`docker run -p 6767:6767 -v %CD%:/var/data/in:ro sourcepole/t-rex:v0.14.3 serve --bind=0.0.0.0 --openbrowser=false --config=myconfig.toml`
 
 </div>
 
