@@ -1,5 +1,5 @@
 title = "t-rex"
-base_url = "https://t-rex.tileserver.ch"
+base_url = "https://t-rex.bbox.earth"
 
 [markdown]
 highlight_code = true
