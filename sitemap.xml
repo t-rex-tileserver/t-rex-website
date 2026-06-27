@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://t-rex.tileserver.ch/</loc>
+        <loc>https://t-rex.bbox.earth/</loc>
     </url>
     <url>
-        <loc>https://t-rex.tileserver.ch/doc/</loc>
+        <loc>https://t-rex.bbox.earth/doc/</loc>
     </url>
     <url>
-        <loc>https://t-rex.tileserver.ch/doc/configuration/</loc>
+        <loc>https://t-rex.bbox.earth/doc/configuration/</loc>
     </url>
     <url>
-        <loc>https://t-rex.tileserver.ch/doc/generate/</loc>
+        <loc>https://t-rex.bbox.earth/doc/generate/</loc>
     </url>
     <url>
-        <loc>https://t-rex.tileserver.ch/doc/reference/</loc>
+        <loc>https://t-rex.bbox.earth/doc/reference/</loc>
     </url>
     <url>
-        <loc>https://t-rex.tileserver.ch/doc/serve/</loc>
+        <loc>https://t-rex.bbox.earth/doc/serve/</loc>
     </url>
     <url>
-        <loc>https://t-rex.tileserver.ch/doc/setup/</loc>
+        <loc>https://t-rex.bbox.earth/doc/setup/</loc>
     </url>
 </urlset>
